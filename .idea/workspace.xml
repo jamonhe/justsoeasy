@@ -15,7 +15,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/justsoeasy$send_mail.coverage" NAME="send_mail Coverage Results" MODIFIED="1392481140074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/email" />
+    <SUITE FILE_PATH="coverage/justsoeasy$send_mail.coverage" NAME="send_mail Coverage Results" MODIFIED="1392481291336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/email" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -52,7 +52,7 @@
       <file leaf-file-name="send_mail.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/email/send_mail.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="97" selection-start="451" selection-end="451" vertical-scroll-proportion="0.1735358" vertical-offset="180" max-vertical-offset="840">
+            <state line="10" column="25" selection-start="236" selection-end="236" vertical-scroll-proportion="0.30368763" vertical-offset="0" max-vertical-offset="840">
               <folding />
             </state>
           </provider>
@@ -432,7 +432,11 @@
       <created>1392478819944</created>
       <updated>1392478819944</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add info@gjeasy.com email">
+      <created>1392481201268</created>
+      <updated>1392481201269</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -469,7 +473,8 @@
     </option>
     <MESSAGE value="aaa" />
     <MESSAGE value="add baidu and weibo search" />
-    <option name="LAST_COMMIT_MESSAGE" value="add baidu and weibo search" />
+    <MESSAGE value="add info@gjeasy.com email" />
+    <option name="LAST_COMMIT_MESSAGE" value="add info@gjeasy.com email" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -574,7 +579,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/email/send_mail.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="97" selection-start="451" selection-end="451" vertical-scroll-proportion="0.1735358" vertical-offset="180" max-vertical-offset="840">
+        <state line="10" column="25" selection-start="236" selection-end="236" vertical-scroll-proportion="0.30368763" vertical-offset="0" max-vertical-offset="840">
           <folding />
         </state>
       </provider>

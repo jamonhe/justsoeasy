@@ -8,7 +8,7 @@ from urlparse import unquote
 default_mail_param = {
     "mail_host": "smtp.exmail.qq.com",
     "mail_user": "info@gjeasy.com",
-    "mail_pass": "qiongo16739",
+    "mail_pass": "test123",
     "mail_postfix": "gjeasy.com",
 }
 
