@@ -8,7 +8,7 @@ from urlparse import unquote
 default_mail_param = {
     "mail_host": "smtp.exmail.qq.com",
     "mail_user": "info@gjeasy.com",
-    "mail_pass": "test123",
+    "mail_pass": "test168",
     "mail_postfix": "gjeasy.com",
 }
 
@@ -37,4 +37,5 @@ if __name__ == "__main__":
         print "发送成功"
     else:
         print "发送失败"
-    #print unquote("%25E5%25A7%259A%25E8%25B4%259D%25E5%25A8%259C")
+
+    #print '\xc7\xeb\xb5\xc7\xc2\xbc\xd0\xde\xb8\xc4\xc3\xdc\xc2\xeb'.decode("utf-8")
