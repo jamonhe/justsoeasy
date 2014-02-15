@@ -7,15 +7,14 @@ from urlparse import unquote
 
 default_mail_param = {
     "mail_host": "smtp.exmail.qq.com",
-    "mail_user": "gjeasy",
+    "mail_user": "info@gjeasy.com",
     "mail_pass": "qiongo16739",
-    "mail_postfix": "xingcloud.com",
+    "mail_postfix": "gjeasy.com",
 }
 
 
 def send_mail(to_list, subject, content, mail_param=default_mail_param):
-    me = "hello" + "<" + mail_param["mail_user"] + "@" + mail_param["mail_postfix"] + ">"
-    #me = "<" + "hehuilin" + "@" + "xingcloud.com" + ">"
+    me = "<" + mail_param["mail_user"].rsplit("@", 1)[0] + "@" + mail_param["mail_postfix"] + ">"
     msg = MIMEText(content, _subtype='plain', _charset='utf8')
     msg['Subject'] = subject
     msg['From'] = me
