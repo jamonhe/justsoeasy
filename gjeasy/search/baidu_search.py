@@ -1,4 +1,5 @@
 #coding: utf8
+import traceback
 
 __author__="hhl"
 
@@ -41,24 +42,31 @@ def search_news(keywords=[], num=5):
     soup = BeautifulSoup(result)
     news_list = []
     for c in soup.findAll("li"):
-        news = {}
-        news["title"] = c.a.text.strip()
-        news["addr"] = c.a.get("href")
-        #print c.span
-        temp = c.span.text.replace("&nbsp;", " ").strip().split(" ", 1)
-        if len(temp) != 2:
+        try:
+            news = {}
+            news["title"] = c.a.text.strip()
+            news["addr"] = c.a.get("href")
+            #print c.span
+            temp = c.span.text.replace("&nbsp;", " ").strip().split(" ", 1)
+            if len(temp) != 2:
+                continue
+            news["source"], news["time"] = temp
+            news["content"] = c.find("div", {"class": "c-summary"}).text\
+                .replace(u"&nbsp;百度快照", "").strip()
+            news_list.append(news)
+        except AttributeError, e:
+            print e
             continue
-        news["source"], news["time"] = temp
-        news["content"] = c.find("div", {"class": "c-summary"}).text\
-            .replace(u"&nbsp;百度快照", "").strip()
-        news_list.append(news)
+        except Exception, e:
+            print traceback.format_exc(e)
+            continue
 
     return news_list
 
 
 
 if __name__=="__main__":
-    keywords = [u"李开复"]
+    keywords = [u"彭丽媛", u"瞎玩"]
     result = search_news(keywords=keywords)
     print len(result)
     for ret in result:
