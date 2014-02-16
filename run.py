@@ -4,7 +4,7 @@ import time
 import tornado.httpserver
 import tornado.ioloop
 import tornado.web
-from views.base import get_msg
+from gjeasy.views.base import get_msg
 
 
 class MainHandler(tornado.web.RequestHandler):

@@ -1,6 +1,6 @@
 #coding=utf8
-from emails.send_mail import send_mail
-from views.base import get_msg
+from gjeasy.emails import send_mail
+from gjeasy.views.base import get_msg
 
 
 key_word = [u"姚贝娜"]
