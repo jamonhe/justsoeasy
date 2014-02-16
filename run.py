@@ -15,7 +15,7 @@ class MainHandler(tornado.web.RequestHandler):
         end_time = time.time()
         print result
         print "took %s seconds" % (end_time-start_time)
-        self.write(result)
+        self.write(result.replace("\n", "<br>").replace(" ", "&nbsp;"))
 
 application = tornado.web.Application([
     (r"/", MainHandler),

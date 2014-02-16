@@ -17,7 +17,7 @@ def get_msg(keywords=[], name=None, interval=200000):
     print news_list
     for news in news_list:
         if cur_time - trans_time(news["time"]) < interval:
-            send_news.append("%s    %s %s \n         %s\n    %s" %
+            send_news.append("%s    %s %s \n   %s\n   %s" %
                              (news["title"], news["source"], news["time"], news["content"], news["addr"]))
 
     send_contents = "\n\n".join(send_news)
@@ -25,14 +25,14 @@ def get_msg(keywords=[], name=None, interval=200000):
     if name:
         weibo= search_weibo(name)
         if cur_time - trans_time(weibo["time"]) < interval:
-            send_weibo_content = "%s %s %s \n      %s" % (name, weibo["addr"], weibo["time"], weibo["content"])
+            send_weibo_content = "%s %s %s \n   %s" % (name, weibo["addr"], weibo["time"], weibo["content"])
             send_contents += send_weibo_content
     return send_contents
 
 
 
 if __name__=="__main__":
-    keywords = [u"姚贝娜"]
+    keywords = [u""]
     result = get_msg(keywords=keywords, name=keywords[0])
     print result
     #print len(result)

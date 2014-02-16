@@ -44,7 +44,11 @@ def search_news(keywords=[], num=5):
         news = {}
         news["title"] = c.a.text.strip()
         news["addr"] = c.a.get("href")
-        news["source"], news["time"] = c.span.text.replace("&nbsp;", " ").strip().split(" ", 1)
+        #print c.span
+        temp = c.span.text.replace("&nbsp;", " ").strip().split(" ", 1)
+        if len(temp) != 2:
+            continue
+        news["source"], news["time"] = temp
         news["content"] = c.find("div", {"class": "c-summary"}).text\
             .replace(u"&nbsp;百度快照", "").strip()
         news_list.append(news)
@@ -54,7 +58,7 @@ def search_news(keywords=[], num=5):
 
 
 if __name__=="__main__":
-    keywords = [u"姚贝娜", u"春晚"]
+    keywords = [u"李开复"]
     result = search_news(keywords=keywords)
     print len(result)
     for ret in result:
