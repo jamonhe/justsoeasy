@@ -1,6 +1,7 @@
 #coding: utf8
 
 #__author__="hhl"
+from datetime import datetime
 
 import urllib
 import urllib2
@@ -25,34 +26,25 @@ def search_weibo(keyword):
     if not keyword:
         return
 
-    encode_words = urllib.quote(keyword)
+    new_weibo = {}
+    encode_words = urllib.quote(keyword.encode("utf-8"))
     url = "%s%s" % (WEIBO_BASE_URL, encode_words)
     print url
     result = br.open(url).read()
     print "************************\n"
     soup = BeautifulSoup(result)
-    news_list = []
-    src = soup.findAll("p", {"class": "person_addr"})
-    weibo = soup.findAll("a", {"value": "direct_user_new_weibo_nologin"})
-    print src
-    print "\n\n~~~~~~~~~~~~~~~~~"
-    print weibo
-    print soup.contents
+    new_weibo["addr"] = soup.find("p", {"class": "person_addr"}).a.string
+    new_weibo["content"] = soup.findAll("div", {"class": "person_newwb"})[0].text
+    year = "%s-" % datetime.now().year
+    new_weibo["time"] = year + soup.find("div", {"class": "person_newwb"}).p.findAll("a")[-1].text\
+        .strip("(").strip(")").replace(u"月", "-").replace(u"日", "").strip(" ") + ":00"
 
-    #for c in soup.findAll("li"):
-    #    news = {}
-    #    news["title"] = c.a.text.strip()
-    #    news["source"], news["date"], news["time"] = c.span.text.replace("&nbsp;", " ").strip().split(" ")
-    #    news["content"] = c.find("div", {"class": "c-summary"}).text.replace(u"&nbsp;百度快照", "").strip()
-    #    news_list.append(news)
-    #    #print c
-    #return news_list
-
+    return new_weibo
 
 
 if __name__=="__main__":
     keyword = "姚贝娜"
-    #search_weibo(keyword=keyword)
+    print search_weibo(keyword=keyword)
     html = """
 <p class="person_addr">
 <span class="female m_icon"></span>
@@ -74,7 +66,10 @@ if __name__=="__main__":
 </div>
 
     """
-    soup = BeautifulSoup(html)
-    print soup.find("p", {"class": "person_addr"}).a.string
-    print soup.findAll("p", {"class": "person_addr"})[0].text
-    print soup.findAll("div", {"class": "person_newwb"})[0].text
+    #soup = BeautifulSoup(html)
+    #print soup.find("p", {"class": "person_addr"}).a.string
+    #print soup.findAll("p", {"class": "person_addr"})[0].text
+    #print soup.findAll("div", {"class": "person_newwb"})[0].text
+    #print soup.find("div", {"class": "person_newwb"}).p.findAll("a")[-1].text.strip(" ").strip("(").strip(")")
+    #str = u"2月13日 19:39"
+    #print str.replace(u"月", "-").replace(u"日", "")

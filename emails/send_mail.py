@@ -33,7 +33,7 @@ def send_mail(to_list, subject, content, mail_param=default_mail_param):
 
 if __name__ == "__main__":
     to_mail = ["352622654@qq.com"]
-    if send_mail(to_mail, "Yao bei na", "gjeasy test"):
+    if send_mail(to_mail, "Yao bei na", "gjeasy test \n Yao"):
         print "发送成功"
     else:
         print "发送失败"
