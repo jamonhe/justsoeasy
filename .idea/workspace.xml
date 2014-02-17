@@ -2,17 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b59ee4c4-bb72-4611-b31b-7283c2d1cee7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gjeasy/config/__init__.py" afterPath="$PROJECT_DIR$/gjeasy/config/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gjeasy/config/configure.py" afterPath="$PROJECT_DIR$/gjeasy/config/configure.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gjeasy/emails/send_mail.py" afterPath="$PROJECT_DIR$/gjeasy/emails/send_mail.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="justsoeasy.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="b59ee4c4-bb72-4611-b31b-7283c2d1cee7" time="1392636002049" ignored="false" />
-    <file path="/configure.py" changelist="b59ee4c4-bb72-4611-b31b-7283c2d1cee7" time="1392636149546" ignored="false" />
+    <file path="/Dummy.txt" changelist="b59ee4c4-bb72-4611-b31b-7283c2d1cee7" time="1392636483432" ignored="false" />
+    <file path="/configure.py" changelist="b59ee4c4-bb72-4611-b31b-7283c2d1cee7" time="1392636405616" ignored="false" />
     <file path="/logger.py" changelist="b59ee4c4-bb72-4611-b31b-7283c2d1cee7" time="1392616655645" ignored="false" />
     <file path="/__init__.py" changelist="b59ee4c4-bb72-4611-b31b-7283c2d1cee7" time="1392636078914" ignored="false" />
     <file path="/a.dummy" changelist="b59ee4c4-bb72-4611-b31b-7283c2d1cee7" time="1392617697348" ignored="false" />
+    <file path="/send_mail.py" changelist="b59ee4c4-bb72-4611-b31b-7283c2d1cee7" time="1392636527159" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +44,7 @@
       <file leaf-file-name="send_mail.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gjeasy/emails/send_mail.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0">
+            <state line="28" column="19" selection-start="877" selection-end="877" vertical-scroll-proportion="-16.551723">
               <folding />
             </state>
           </provider>
@@ -78,15 +78,6 @@
         </entry>
       </file>
       <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gjeasy/emails/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gjeasy/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="1" column="0" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0">
@@ -95,13 +86,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logger.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="logger.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gjeasy/logger.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="87" selection-start="279" selection-end="279" vertical-scroll-proportion="0.4524887">
+            <state line="25" column="22" selection-start="683" selection-end="683" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#55#69#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="baidu_search.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gjeasy/search/baidu_search.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="24" selection-start="441" selection-end="441" vertical-scroll-proportion="0.5714286">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -118,7 +118,7 @@
       <file leaf-file-name="configure.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gjeasy/config/configure.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="32" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
+            <state line="7" column="24" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#13#22#0" expanded="true" />
               </folding>
@@ -126,10 +126,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="weibo_search.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gjeasy/search/weibo_search.py">
+      <file leaf-file-name="gjeasy.log" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/log/gjeasy.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="77" selection-start="1319" selection-end="1319" vertical-scroll-proportion="0.0">
+            <state line="7" column="0" selection-start="599" selection-end="599" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -153,7 +153,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/xingcloud_login.py" />
         <option value="$PROJECT_DIR$/search/__init__.py" />
         <option value="$PROJECT_DIR$/__init__.py" />
         <option value="$PROJECT_DIR$/email/send_mail.py" />
@@ -166,9 +165,10 @@
         <option value="$PROJECT_DIR$/gjeasy/tasks/period_task.py" />
         <option value="$PROJECT_DIR$/gjeasy/search/baidu_search.py" />
         <option value="$PROJECT_DIR$/gjeasy/__init__.py" />
-        <option value="$PROJECT_DIR$/gjeasy/logger.py" />
         <option value="$PROJECT_DIR$/gjeasy/config/__init__.py" />
+        <option value="$PROJECT_DIR$/gjeasy/logger.py" />
         <option value="$PROJECT_DIR$/gjeasy/config/configure.py" />
+        <option value="$PROJECT_DIR$/gjeasy/emails/send_mail.py" />
       </list>
     </option>
   </component>
@@ -218,6 +218,88 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="justsoeasy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="justsoeasy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="justsoeasy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="log" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="justsoeasy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="justsoeasy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gjeasy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="justsoeasy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="justsoeasy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gjeasy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="search" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="justsoeasy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="justsoeasy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gjeasy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="emails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="justsoeasy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="justsoeasy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gjeasy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -597,18 +679,27 @@
       <created>1392619635963</created>
       <updated>1392619635963</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="add log">
+      <created>1392636192760</created>
+      <updated>1392636192760</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add mysql config">
+      <created>1392636484958</created>
+      <updated>1392636484958</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-5" y="0" width="1571" height="874" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18405315" sideWeight="0.71809256" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18405315" sideWeight="0.71809256" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -619,7 +710,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959327" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -667,7 +757,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="add log" />
+    <option name="LAST_COMMIT_MESSAGE" value="add mysql config" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -687,18 +777,12 @@
     <MESSAGE value="add tornado" />
     <MESSAGE value="change dir struct" />
     <MESSAGE value="add log" />
+    <MESSAGE value="add mysql config" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gjeasy/search/weibo_search.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="77" selection-start="1319" selection-end="1319" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/urllib2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="453" column="4" selection-start="14960" selection-end="14960" vertical-scroll-proportion="-0.15161291" />
@@ -733,13 +817,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gjeasy/emails/send_mail.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gjeasy/search/weibo_search.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="77" selection-start="1319" selection-end="1319" vertical-scroll-proportion="0.0">
@@ -761,11 +838,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gjeasy/search/baidu_search.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="11" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gjeasy/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0">
@@ -780,21 +852,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/log/gjeasy.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="599" selection-end="599" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gjeasy/logger.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="22" selection-start="683" selection-end="683" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#55#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gjeasy/config/configure.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="32" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
+        <state line="7" column="24" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#13#22#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gjeasy/logger.py">
+    <entry file="file://$PROJECT_DIR$/gjeasy/emails/send_mail.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="87" selection-start="279" selection-end="279" vertical-scroll-proportion="0.4524887">
-          <folding>
-            <element signature="e#55#69#0" expanded="true" />
-          </folding>
+        <state line="28" column="19" selection-start="877" selection-end="877" vertical-scroll-proportion="-16.551723">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gjeasy/search/baidu_search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="24" selection-start="441" selection-end="441" vertical-scroll-proportion="0.5714286">
+          <folding />
         </state>
       </provider>
     </entry>

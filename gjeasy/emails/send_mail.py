@@ -4,6 +4,7 @@ import smtplib
 from email.mime.text import MIMEText
 import traceback
 from urlparse import unquote
+from gjeasy import logger
 
 default_mail_param = {
     "mail_host": "smtp.exmail.qq.com",
@@ -27,8 +28,7 @@ def send_mail(to_list, subject, content, mail_param=default_mail_param):
         server.close()
         return True
     except Exception, e:
-        print str(e)
-        print traceback.format_exc(e)
+        logger.error(traceback.format_exc(e))
         return False
 
 if __name__ == "__main__":
