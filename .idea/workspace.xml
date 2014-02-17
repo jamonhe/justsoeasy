@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b59ee4c4-bb72-4611-b31b-7283c2d1cee7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gjeasy/emails/send_mail.py" afterPath="$PROJECT_DIR$/gjeasy/emails/send_mail.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="justsoeasy.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="b59ee4c4-bb72-4611-b31b-7283c2d1cee7" time="1392636483432" ignored="false" />
+    <file path="/Dummy.txt" changelist="b59ee4c4-bb72-4611-b31b-7283c2d1cee7" time="1392637694295" ignored="false" />
     <file path="/configure.py" changelist="b59ee4c4-bb72-4611-b31b-7283c2d1cee7" time="1392636405616" ignored="false" />
     <file path="/logger.py" changelist="b59ee4c4-bb72-4611-b31b-7283c2d1cee7" time="1392616655645" ignored="false" />
     <file path="/__init__.py" changelist="b59ee4c4-bb72-4611-b31b-7283c2d1cee7" time="1392636078914" ignored="false" />
@@ -687,7 +686,11 @@
       <created>1392636484958</created>
       <updated>1392636484958</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="add mysql config">
+      <created>1392637697249</created>
+      <updated>1392637697249</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
