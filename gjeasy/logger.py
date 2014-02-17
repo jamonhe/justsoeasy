@@ -76,7 +76,7 @@ logger = Logging.getLogger('gjeasy', log_level=LOG_LEVEL, log_file=LOG_FILE)
 # celery_logger = Logging.getLogger('DNFS_Celery', log_level=setting.CELERY_LOG_LEVEL, log_file=setting.CELERY_LOG_FILE)
 
 if __name__ == '__main__':
-    logger = Logging.getLogger(log_level="debug")
+    logger = Logging.getLogger('gjeasy', log_level=LOG_LEVEL, log_file=LOG_FILE)
 
     logger.debug('debug message')
     logger.info('info message')
