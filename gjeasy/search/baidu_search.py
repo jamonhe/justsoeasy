@@ -11,17 +11,18 @@ import cookielib
 import mechanize
 from BeautifulSoup import BeautifulSoup
 from datetime import datetime
+from gjeasy.logger import logger
 import time
 
 BAIDU_BASE_URL = {
     "news": "http://news.baidu.com/ns?",
 }
-
+br = mechanize.Browser()
 def search_news(keywords=[], num=5):
     if not keywords:
         return
     #print keywords
-    br = mechanize.Browser()
+
     cj = cookielib.LWPCookieJar()
     br.set_cookiejar(cj)
     br.set_handle_equiv(True)
@@ -55,10 +56,10 @@ def search_news(keywords=[], num=5):
                 .replace(u"&nbsp;百度快照", "").strip()
             news_list.append(news)
         except AttributeError, e:
-            print e
+            logger.warning(e)
             continue
         except Exception, e:
-            print traceback.format_exc(e)
+            logger.error(traceback.format_exc(e))
             continue
 
     return news_list

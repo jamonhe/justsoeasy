@@ -29,9 +29,9 @@ def search_weibo(keyword):
     new_weibo = {}
     encode_words = urllib.quote(keyword.encode("utf-8"))
     url = "%s%s" % (WEIBO_BASE_URL, encode_words)
-    print url
+
     result = br.open(url).read()
-    print "************************\n"
+
     soup = BeautifulSoup(result)
     new_weibo["addr"] = soup.find("p", {"class": "person_addr"}).a.string
     new_weibo["content"] = soup.findAll("div", {"class": "person_newwb"})[0].text
