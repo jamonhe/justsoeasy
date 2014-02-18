@@ -3,8 +3,6 @@ import traceback
 
 __author__="hhl"
 
-
-
 import urllib
 import urllib2
 import cookielib
@@ -18,6 +16,7 @@ BAIDU_BASE_URL = {
     "news": "http://news.baidu.com/ns?",
 }
 br = mechanize.Browser()
+
 def search_news(keywords=[], num=5):
     if not keywords:
         return
@@ -67,13 +66,16 @@ def search_news(keywords=[], num=5):
 
 
 if __name__=="__main__":
-    keywords = [u"彭丽媛", u"瞎玩"]
-    result = search_news(keywords=keywords)
-    print len(result)
-    for ret in result:
-        print ret["title"], " ", ret["source"]
-        print ret["time"]
-        print "    ", ret["content"], "\n"
-
-    #str = "2014-02-13 10:33:00"
+    #keywords = [u"彭丽媛", u"瞎玩"]
+    #result = search_news(keywords=keywords)
+    #print len(result)
+    #for ret in result:
+    #    print ret["title"], " ", ret["source"]
+    #    print ret["time"]
+    #    print "    ", ret["content"], "\n"
     #
+    ##str = "2014-02-13 10:33:00"
+    #
+    import requests
+    url = "http://115.29.142.18:8880/?word=%s" % (urllib.quote(u"姚贝娜".encode("utf-8")))
+    requests.get(url)
