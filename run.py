@@ -4,6 +4,7 @@ import time
 import tornado.httpserver
 import tornado.ioloop
 import tornado.web
+from gjeasy.logger import logger
 from gjeasy.views.base import get_msg
 
 
@@ -13,8 +14,8 @@ class MainHandler(tornado.web.RequestHandler):
         start_time = time.time()
         result = get_msg(keywords=word)
         end_time = time.time()
-        print result
-        print "took %s seconds" % (end_time-start_time)
+        logger.debug("found result: %s" % result)
+        logger.debug("this search took %s seconds" % (end_time-start_time))
         self.write(result.replace("\n", "<br>").replace(" ", "&nbsp;"))
 
 application = tornado.web.Application([
