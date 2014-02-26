@@ -33,7 +33,13 @@ def send_mail(to_list, subject, content, mail_param=default_mail_param):
 
 if __name__ == "__main__":
     to_mail = ["352622654@qq.com"]
-    if send_mail(to_mail, "Yao bei na", "gjeasy test \n Yao"):
+    content = """<a href="www.baidu.com">
+    网传刘欢改编《卷珠帘》是为
+			<em>
+				姚贝娜
+			</em>
+    """
+    if send_mail(to_mail, "Yao bei na", content):
         print "发送成功"
     else:
         print "发送失败"

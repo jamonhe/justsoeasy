@@ -34,7 +34,7 @@ def search_weibo(keyword):
 
     soup = BeautifulSoup(result)
     new_weibo["addr"] = soup.find("p", {"class": "person_addr"}).a.string
-    new_weibo["content"] = soup.findAll("div", {"class": "person_newwb"})[0].text
+    new_weibo["content"] = [p.text for p in soup.findAll("div", {"class": "person_newwb"})]
     year = "%s-" % datetime.now().year
     new_weibo["time"] = year + soup.find("div", {"class": "person_newwb"}).p.findAll("a")[-1].text\
         .strip("(").strip(")").replace(u"月", "-").replace(u"日", "").strip(" ") + ":00"
@@ -43,8 +43,12 @@ def search_weibo(keyword):
 
 
 if __name__=="__main__":
-    keyword = "姚贝娜"
-    print search_weibo(keyword=keyword)
+    keyword = u"姚贝娜"
+    result = search_weibo(keyword=keyword)
+    print result["addr"]
+    for c in result["content"]:
+        print c
+    print result["time"]
     html = """
 <p class="person_addr">
 <span class="female m_icon"></span>

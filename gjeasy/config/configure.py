@@ -18,4 +18,4 @@ MYSQL_PASSWORD = "test168"
 
 MONGO_HOST = "115.29.142.18"
 MONGO_PORT = 27017
-MONGO_DBS = {"news": "news", "weibo": "weibo"}
+MONGO_DBS = {"news": "news", "weibo": "weibo", "keywords": "keywords"}

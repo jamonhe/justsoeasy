@@ -13,7 +13,7 @@ class ACCOUNT_FORMAT_EXCEPTION():
 class Account(Base):
     __tablename__ = "account"
     id = Column(BIGINT(unsigned=True), primary_key=True)
-    email = Column(String(50), index=True)
+    email = Column(String(50), nullable=False, index=True)
     phone = Column(String(20), index=True)
     passwd = Column("passwd", String(20))
 
