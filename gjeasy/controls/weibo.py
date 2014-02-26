@@ -2,9 +2,10 @@
 
 from gjeasy.config.configure import MONGO_HOST, MONGO_PORT, MONGO_DBS
 from pymongo import MongoClient
+from gjeasy.utils.md5 import cal_key
 
 weibo_conn = MongoClient(host=MONGO_HOST, port=MONGO_PORT)
-weibo_db = weibo_conn[MONGO_DBS["weibo"]]
+weibo_collection = weibo_conn[MONGO_DBS["weibo"]]["sina"]
 
 
 class Weibo(object):
@@ -15,5 +16,14 @@ class Weibo(object):
         self.url = url
 
     @classmethod
-    def create(cls, title, content, url, **kwargs):
-        pass
+    def create(cls, name, content, url, **kwargs):
+        key = cal_key(content)
+        weibo =  {
+            "name": name,
+            "content": content,
+            "url": url,
+            "key": key,
+        }
+        for k, v in kwargs.items():
+            weibo[k] = v
+        weibo_collection.update({"name": name, "key": key}, weibo, True)
