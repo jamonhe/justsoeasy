@@ -2,7 +2,7 @@
 import contextlib
 import traceback
 from sqlalchemy.orm import sessionmaker
-from gjeasy.controls.base import dbs
+from gjeasy.models.base import dbs
 import kratos.controls.shard
 from gjeasy.logger import logger
 

@@ -2,7 +2,7 @@
 
 from sqlalchemy import Column, Integer,String, BIGINT
 from gjeasy.config.configure import MYSQL_DB, MYSQL_HOST, MYSQL_PASSWORD, MYSQL_PORT, MYSQL_USER
-from gjeasy.controls.base import Base
+from gjeasy.models.base import Base
 
 
 class ACCOUNT_FORMAT_EXCEPTION():
