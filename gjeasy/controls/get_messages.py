@@ -12,6 +12,13 @@ def trans_time(str):
     cur_time= datetime.strptime(str, "%Y-%m-%d %H:%M:%S")
     return int(time.mktime(cur_time.timetuple()))
 
+def need_send_news(keywords, news_list):
+    """
+    : keywords: key words list in once search news
+    : news_list: news results(a list) of searching , must contain title,content,time,url
+    """
+
+
 def get_msg(keywords=[], name=None, interval=200000):
     try:
         if not keywords and not name:
