@@ -6,7 +6,7 @@ from pymongo import MongoClient
 words_conn = MongoClient(host=MONGO_HOST, port=MONGO_PORT)
 words_collection = words_conn[MONGO_DBS["keywords"]]["words"]
 
-class Keywords(object):
+class AccountSetting(object):
     """
     The keywords collection structure(a document):
        "word": keysword ,
