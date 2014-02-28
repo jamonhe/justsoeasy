@@ -1,5 +1,5 @@
 #coding=utf8
-from sqlalchemy import BIGINT, String
+from sqlalchemy import BIGINT, String, Integer
 from xlwt import Column
 
 from gjeasy.config.configure import MONGO_HOST, MONGO_PORT, MONGO_DBS
@@ -12,6 +12,12 @@ class AccountSetting(object):
     __tablename__ = "account_setting"
     id = Column(BIGINT(unsigned=True), primary_key=True)
     email = Column(String(50), nullable=False, unique=True, index=True)
+
+    #搜索的间隔
+    interval = Column(Integer, default=300)
+    #最近一次发送邮件的时间
+    emailed_time = Column(BIGINT(unsigned=True))
+
     @classmethod
     def add_words(cls, email, add_word_list):
         """
