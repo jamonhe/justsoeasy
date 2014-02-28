@@ -1,5 +1,5 @@
 #coding=utf8
-from sqlalchemy import BIGINT
+from sqlalchemy import BIGINT, String
 from xlwt import Column
 
 from gjeasy.config.configure import MONGO_HOST, MONGO_PORT, MONGO_DBS
