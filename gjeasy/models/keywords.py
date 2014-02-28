@@ -14,7 +14,6 @@ class Keywords(object):
        "interval": 300, 120, ...   #搜索的最短时间间隔
        "last_time": 13...         # timestamp, 最后一次的搜索时间
        "email_list": [ , ]
-
     """
     @classmethod
     def add_words(cls, email, add_word_list):
@@ -32,10 +31,9 @@ class Keywords(object):
 
 
     @classmethod
-    def get_words(cls, email_list):
-        result = []
-        for email in email_list:
-            result.append((email, words_collection.find_one({"email": email})))
+    def get_search_words(cls, interval=300):
+        result =[ (word.get("word"), word.get("email_list")) for word in words_collection.find({"interval": 300}) ]
+
         return result
 
 if __name__ == "__main__":

@@ -5,7 +5,7 @@ from gjeasy.models.account import Account
 from gjeasy.models.keywords import Keywords
 
 
-def process_messages():
+def process_messages(interval=300):
     """
     1. 获取所有需要翻译的keywords, 分级别：5分钟，2分钟等，默认五分钟 ;
     2. 搜寻百度、微博等最新消息 ;
@@ -13,9 +13,8 @@ def process_messages():
     3. 根据keywords注册的email_list将最新消息内容发送给相应email用户;
     4. 将内容存入mongo中的content数据库;
     """
-    need_emails = Account.get_avail_account()
-    email_words = Keywords.get_words(need_emails)
-    for email, words in email_words:
-        latest_content = get_msg(words, words)
-        subject = ",".join(words) + "最新消息"
-        send_mail(email, subject, latest_content)
+    words_emails = Keywords.get_search_words(interval)
+    for word, emails in words_emails:
+        latest_content = get_msg(word, word, interval)
+        subject = word  + " 最新消息"
+        send_mail(emails, subject, latest_content)

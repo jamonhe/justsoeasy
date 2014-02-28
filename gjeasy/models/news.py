@@ -8,7 +8,14 @@ news_conn = MongoClient(host=MONGO_HOST, port=MONGO_PORT)
 news_collection = news_conn[MONGO_DBS["news"]]["baidu"]
 
 class News(object):
-
+    """
+    : title : news title
+    : content: news content
+    : url:   news url addr
+    : key: content md5
+    : imgs: image urls in the content if exist
+    : time: news publish time
+    """
     def __init__(self, title, content, url, **kwargs):
         self.title = title
         self.content = content
