@@ -1,4 +1,6 @@
 #coding=utf8
+from sqlalchemy import BIGINT
+from xlwt import Column
 
 from gjeasy.config.configure import MONGO_HOST, MONGO_PORT, MONGO_DBS
 from pymongo import MongoClient
@@ -7,15 +9,9 @@ words_conn = MongoClient(host=MONGO_HOST, port=MONGO_PORT)
 words_collection = words_conn[MONGO_DBS["keywords"]]["words"]
 
 class AccountSetting(object):
-    """
-    The keywords collection structure(a document):
-       "word": keysword ,
-       "key": ... ，               # md5 of keyword
-       "interval": 300, 120, ...   #搜索的最短时间间隔
-       "last_time": 13...         # timestamp, 最后一次的搜索时间
-       "email_list": [ , ]
-
-    """
+    __tablename__ = "account_setting"
+    id = Column(BIGINT(unsigned=True), primary_key=True)
+    email = Column(String(50), nullable=False, unique=True, index=True)
     @classmethod
     def add_words(cls, email, add_word_list):
         """
