@@ -1,5 +1,6 @@
 #coding: utf8
 import traceback
+from gjeasy.utils.coding_str import str2utf8
 
 __author__="hhl"
 
@@ -17,7 +18,16 @@ BAIDU_BASE_URL = {
 }
 br = mechanize.Browser()
 
-def search_news(keywords=[], num=5):
+def search_news(keyword=None, num=5):
+    """
+    return result of search news, a dict which contains :
+    : title: news title
+    : url : news url
+    : source: news source like "sina"
+    : images : image urls in the content
+    : content: news content
+    : time:  news publish time
+    """
     if not keywords:
         return
     #print keywords
@@ -32,9 +42,7 @@ def search_news(keywords=[], num=5):
     br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(), max_time=1)
     br.addheaders = [('User-agent', 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008071615 Fedora/3.0.1-1.fc9 Firefox/3.0.1')]
 
-
-    encode_words = [urllib.quote(word.encode("utf-8")) for word in keywords]
-    search_words = "+".join(encode_words)
+    search_words = urllib.quote(str2utf8(keyword)[0])
     url = "%sword=%s" % (BAIDU_BASE_URL["news"], search_words)
     #print url
     result = br.open(url).read()
@@ -45,8 +53,8 @@ def search_news(keywords=[], num=5):
         try:
             news = {}
             news["title"] = c.a.text.strip()
-            news["addr"] = c.a.get("href")
-            news["image"] = [img.get("src") for img in c.findAll("img")]
+            news["url"] = c.a.get("href")
+            news["images"] = [img.get("src") for img in c.findAll("img")]
 
             temp = c.span.text.replace("&nbsp;", " ").strip().split(" ", 1)
             if len(temp) != 2:
@@ -73,7 +81,7 @@ if __name__=="__main__":
     print len(result)
     for ret in result:
         print ret["title"], " ", ret["source"]
-        print ret["time"], ret["addr"], ret["image"]
+        print ret["time"], ret["url"], ret["images"]
         print "    ", ret["content"], "\n\n"
     #
     ##str = "2014-02-13 10:33:00"

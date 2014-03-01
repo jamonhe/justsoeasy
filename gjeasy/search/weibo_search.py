@@ -23,6 +23,14 @@ br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(), max_time=1)
 br.addheaders = [('User-agent', 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008071615 Fedora/3.0.1-1.fc9 Firefox/3.0.1')]
 
 def search_weibo(keyword):
+    """
+    return result of search weibos, a dict which contains :
+    : name: weibo name
+    : url : weibo url
+    : content: news content
+    : time:  news publish time
+    """
+
     if not keyword:
         return
 
@@ -33,7 +41,7 @@ def search_weibo(keyword):
     result = br.open(url).read()
 
     soup = BeautifulSoup(result)
-    new_weibo["addr"] = soup.find("p", {"class": "person_addr"}).a.string
+    new_weibo["url"] = soup.find("p", {"class": "person_addr"}).a.string
     new_weibo["content"] = [p.text for p in soup.findAll("div", {"class": "person_newwb"})]
     year = "%s-" % datetime.now().year
     new_weibo["time"] = year + soup.find("div", {"class": "person_newwb"}).p.findAll("a")[-1].text\
@@ -45,7 +53,7 @@ def search_weibo(keyword):
 if __name__=="__main__":
     keyword = u"姚贝娜"
     result = search_weibo(keyword=keyword)
-    print result["addr"]
+    print result["url"]
     for c in result["content"]:
         print c
     print result["time"]
