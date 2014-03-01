@@ -59,5 +59,18 @@ class AccountSetting(Base):
             account_setting.emailed_time = timestamp
             session.commit()
 
+    @classmethod
+    def get_last_time(cls, email, keyword):
+        """
+         return searched_time, emailed_time
+        : email: AccountSetting email
+        : keyword: key word of search news/weibo... ,
+        : timestamp: timestamp of search result
+        """
+        with sessionCM() as session:
+            ret = session.query(AccountSetting).filter_by(email=email, keyword=keyword).first()
+            return ret.searched_time, ret.emailed_time
+
+
 if __name__ == "__main__":
     AccountSetting.add_words("352622654@qq.com", [u"姚贝娜"])

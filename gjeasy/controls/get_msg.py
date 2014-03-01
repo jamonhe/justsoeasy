@@ -12,7 +12,7 @@ from gjeasy.utils.tranverse_time import trans_time
 
 MAX_LONG_TIME = 100000
 
-def need_send_news(keyword, news_list):
+def can_send_news(keyword, news_list):
     """
     return new news and last day news
     : keyword:  key word in once search news
@@ -26,36 +26,44 @@ def need_send_news(keyword, news_list):
         ret["time"] = trans_time(ret.get("time"))
         if not is_created and ret["time"] < current_time - MAX_LONG_TIME:
             break
-        send_news.append("%s    %s %s \n   %s\n   %s" %
-                         (news["title"], news["source"], news["time"], news["content"], news["url"]))
-    return search_news
+        send_news.append(news)
+    return send_news
 
-def need_send_weibo(name, weibo):
+def can_send_weibo(name, weibo):
     """
     return new weibo or last day weibo
     : name:  weibo name in once search news
     : weibo: weibo info of searching , must contain name,content,time,url
     """
+    current_time = time.time()
     ret, is_created = Weibo.create(name, weibo)
-    if cur_time - trans_time(weibo["time"]) < interval:
-        send_weibo_content = "%s %s %s \n   %s" % (name, weibo["addr"], weibo["time"], weibo["content"])
+    if not is_created and ret["time"] < current_time - MAX_LONG_TIME:
+        return None
+    return weibo
 
 def get_msg(keyword=None, name=None, interval=200000):
+    """
+     return grab message and took some filter(如果新闻或微博内容数据库中木有，则返回；
+        如果有且发布时间在MAX_LONG_TIME 以内，也返回；其他过滤掉)
+    : keyword: key word for searching news
+    : name: weibo account
+    """
     try:
         if not keyword and not name:
-            return ""
+            return {}
+        send_contents = {}
         news_list = search_news(keyword)
-        cur_time = int(time.time())
-
-        send_contents = "\n\n".join(need_send_news(keyword, news_list))
+        send_contents["news"] = can_send_news(keyword, news_list)
 
         if name:
-            weibo= search_weibo(name)
-            send_contents += send_weibo_content
+            weibo = search_weibo(name)
+            ret = can_send_weibo(name, weibo)
+            if ret:
+                send_contents["weibo"] = ret
         return send_contents
     except Exception, e:
         logger.error(traceback.format_exc(e))
-        return "Null"
+        return {}
 
 
 
