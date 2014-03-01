@@ -3,14 +3,14 @@ from sqlalchemy import BIGINT, String, Integer, Column, ForeignKey, Sequence
 from sqlalchemy.orm import relationship
 from gjeasy.models.base import Base
 from gjeasy.models.session import sessionCM
-
+from gjeasy.models.account import Account
 
 class AccountSetting(Base):
     __tablename__ = "account_setting"
-    __table_args__ = {"mysql_engine": "InnoDB"}
+    __table_args__ = {"mysql_engine": "InnoDB", 'mysql_charset': 'utf8'}
 
     id = Column(Integer, Sequence("setting_id_seq"), primary_key=True)
-    email = relationship("Account", backref="keywords", order_by="Account.email")
+    email = Column(String(50), nullable=False, index=True, char_set="utf8")
 
     keyword = Column(String(100), nullable=False, index=True)
 
@@ -21,6 +21,7 @@ class AccountSetting(Base):
     #最近一次发送邮件的时间
     emailed_time = Column(Integer, default=0)
 
+    #account = relationship("Account", backref="keywords", order_by="Account.email")
     def __init__(self, email, keyword, **kwargs):
         self.email = email
         self.keyword = keyword
@@ -32,9 +33,12 @@ class AccountSetting(Base):
         """
         with sessionCM() as session:
             ret = session.query(AccountSetting).filter_by(email=email)\
-                .filter(AccountSetting.keyword._in(add_word_list)).all()
-            exist_words = [a.word for a in ret]
+                .filter(AccountSetting.keyword.in_(add_word_list)).all()
+            exist_words = [a.keyword for a in ret]
+            if ret:
+                print exist_words, type(ret[0].keyword), type(ret[0].email)
             need_add_words = list(set(add_word_list) - set(exist_words))
+            print need_add_words, add_word_list
             for word in need_add_words:
                 new_setting = cls(email=email, keyword=word)
                 session.add(new_setting)
@@ -77,4 +81,7 @@ class AccountSetting(Base):
 
 
 if __name__ == "__main__":
-    AccountSetting.add_words("352622654@qq.com", [u"姚贝娜"])
+    email = "352622654@qq.com"
+    keyword = ["姚贝娜"]
+    AccountSetting.add_words(email, keyword)
+    print AccountSetting.get_last_time(email, keyword[0])

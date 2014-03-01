@@ -43,7 +43,5 @@ class Account(Base):
 
 
 if __name__ == "__main__":
-    from gjeasy.models.base import metadata
-    print metadata.sorted_tables[0].name
-    print len(metadata.sorted_tables)
-    #Account.create("352622654@qq.com", "13476261942", "test168")
+
+    Account.create("352622654@qq.com", "13476261942", "test168")

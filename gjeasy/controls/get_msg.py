@@ -20,7 +20,7 @@ def can_send_news(keyword, news_list):
     : news_list: news results(a list) of searching , must contain title,content,time,url
     """
     send_news = []
-    current_time = time.time()
+    current_time = int(time.time())
     logger.debug("found %s news" % len(news_list))
     for news in news_list:
         ret, is_created = News.create(keyword, news)
@@ -36,7 +36,7 @@ def can_send_weibo(name, weibo):
     : name:  weibo name in once search news
     : weibo: weibo info of searching , must contain name,content,time,url
     """
-    current_time = time.time()
+    current_time = int(time.time())
     ret, is_created = Weibo.create(name, weibo)
     if not is_created and ret["time"] < current_time - MAX_LONG_TIME:
         return None
