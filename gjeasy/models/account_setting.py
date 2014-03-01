@@ -40,14 +40,15 @@ class AccountSetting(Base):
         return True
 
     @classmethod
-    def update_search_time(cls, email, keyword, timestamp):
+    def update_search_time(cls, email_list, keyword, timestamp):
         """
         update searched_time
         """
         with sessionCM() as session:
-            account_setting = session.query(AccountSetting).filter_by(email=email, keyword=keyword).first()
-            account_setting.searched_time = timestamp
-            session.commit()
+            for email in email_list:
+                account_setting = session.query(AccountSetting).filter_by(email=email, keyword=keyword).first()
+                account_setting.searched_time = timestamp
+                session.commit()
 
     @classmethod
     def update_email_time(cls, email, keyword, timestamp):

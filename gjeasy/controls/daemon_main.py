@@ -1,7 +1,10 @@
 #coding=utf8
+import time
 from gjeasy.controls.get_msg import get_msg
+from gjeasy.controls.send_msg import send_msg
 from gjeasy.emails.send_mail import send_mail
 from gjeasy.models.account import Account
+from gjeasy.models.account_setting import AccountSetting
 from gjeasy.models.keywords import Keywords
 
 
@@ -15,6 +18,6 @@ def daemon_main(interval=300):
     """
     words_emails = Keywords.get_search_words(interval)
     for word, emails in words_emails:
+        AccountSetting.update_search_time(emails, word, time.time())
         latest_content = get_msg(word, word, interval)
-        subject = word + " 最新消息"
-        send_mail(emails, subject, latest_content)
+        send_msg(word, emails, latest_content)

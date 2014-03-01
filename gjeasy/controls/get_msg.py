@@ -3,6 +3,7 @@ from datetime import datetime
 import time
 import traceback
 from gjeasy.logger import logger
+from gjeasy.models.account_setting import AccountSetting
 from gjeasy.models.news import News
 from gjeasy.models.weibo import Weibo
 

@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b59ee4c4-bb72-4611-b31b-7283c2d1cee7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gjeasy/controls/send_msg.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gjeasy/models/account_setting.py" afterPath="$PROJECT_DIR$/gjeasy/models/account_setting.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gjeasy/controls/daemon_main.py" afterPath="$PROJECT_DIR$/gjeasy/controls/daemon_main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gjeasy/tasks/period_task.py" afterPath="$PROJECT_DIR$/gjeasy/tasks/period_task.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run.py" afterPath="$PROJECT_DIR$/run.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gjeasy/controls/get_msg.py" afterPath="$PROJECT_DIR$/gjeasy/controls/get_msg.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gjeasy/models/keywords.py" afterPath="$PROJECT_DIR$/gjeasy/models/keywords.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gjeasy/controls/send_msg.py" afterPath="$PROJECT_DIR$/gjeasy/controls/send_msg.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="F:\git\easy\gjeasy\controls\get_messages.py" afterPath="$PROJECT_DIR$/gjeasy/controls/get_msg.py" />
     </list>
     <ignored path="justsoeasy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,7 +43,7 @@
       <file leaf-file-name="get_msg.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gjeasy/controls/get_msg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="4" selection-start="1534" selection-end="1598" vertical-scroll-proportion="0.0" vertical-offset="652" max-vertical-offset="1640">
+            <state line="43" column="0" selection-start="1411" selection-end="1411" vertical-scroll-proportion="0.0" vertical-offset="783" max-vertical-offset="1660">
               <folding>
                 <element signature="e#13#42#0" expanded="true" />
               </folding>
@@ -55,9 +54,9 @@
       <file leaf-file-name="daemon_main.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gjeasy/controls/daemon_main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="29" selection-start="536" selection-end="536" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="500">
+            <state line="20" column="28" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0" vertical-offset="100" max-vertical-offset="580">
               <folding>
-                <element signature="e#13#56#0" expanded="true" />
+                <element signature="e#13#24#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -75,7 +74,7 @@
       <file leaf-file-name="send_msg.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gjeasy/controls/send_msg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="56" selection-start="1259" selection-end="1259" vertical-scroll-proportion="0.42492014" vertical-offset="394" max-vertical-offset="1020">
+            <state line="59" column="25" selection-start="2279" selection-end="2279" vertical-scroll-proportion="0.0776699" vertical-offset="1148" max-vertical-offset="1560">
               <folding>
                 <element signature="e#13#42#0" expanded="true" />
               </folding>
@@ -83,10 +82,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="keywords.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gjeasy/models/keywords.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="0" selection-start="1165" selection-end="1165" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="880">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="account_setting.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gjeasy/models/account_setting.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="47" selection-start="2024" selection-end="2024" vertical-scroll-proportion="0.0" vertical-offset="914" max-vertical-offset="1580">
+            <state line="42" column="60" selection-start="1422" selection-end="1422" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="1600">
               <folding />
             </state>
           </provider>
@@ -124,7 +132,6 @@
         <option value="$PROJECT_DIR$/gjeasy/config/configure.py" />
         <option value="$PROJECT_DIR$/gjeasy/controls/keywords.py" />
         <option value="$PROJECT_DIR$/gjeasy/controls/daemon_grab.py" />
-        <option value="$PROJECT_DIR$/gjeasy/models/keywords.py" />
         <option value="$PROJECT_DIR$/gjeasy/models/account.py" />
         <option value="$PROJECT_DIR$/gjeasy/search/baidu_search.py" />
         <option value="$PROJECT_DIR$/gjeasy/search/weibo_search.py" />
@@ -132,17 +139,17 @@
         <option value="$PROJECT_DIR$/gjeasy/models/weibo.py" />
         <option value="$PROJECT_DIR$/gjeasy/models/news.py" />
         <option value="$PROJECT_DIR$/gjeasy/controls/get_messages.py" />
+        <option value="$PROJECT_DIR$/gjeasy/controls/filter_msg.py" />
+        <option value="$PROJECT_DIR$/gjeasy/models/keywords.py" />
+        <option value="$PROJECT_DIR$/gjeasy/controls/send_msg.py" />
         <option value="$PROJECT_DIR$/gjeasy/controls/get_msg.py" />
         <option value="$PROJECT_DIR$/gjeasy/controls/daemon_main.py" />
-        <option value="$PROJECT_DIR$/gjeasy/controls/filter_msg.py" />
         <option value="$PROJECT_DIR$/gjeasy/models/account_setting.py" />
-        <option value="$PROJECT_DIR$/gjeasy/controls/send_msg.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="12" />
-    <option name="y" value="34" />
+    <option name="x" value="24" />
     <option name="width" value="1269" />
     <option name="height" value="788" />
   </component>
@@ -738,11 +745,15 @@
       <created>1393666421371</created>
       <updated>1393666421372</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="change to new structure">
+      <created>1393672506576</created>
+      <updated>1393672506576</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="12" y="34" width="1269" height="788" extended-state="0" />
+    <frame x="24" y="0" width="1269" height="788" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -756,7 +767,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3180428" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32721713" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32721713" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -873,34 +884,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gjeasy/models/account_setting.py">
+    <entry file="file://$PROJECT_DIR$/gjeasy/models/keywords.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="47" selection-start="2024" selection-end="2024" vertical-scroll-proportion="0.0" vertical-offset="914" max-vertical-offset="1580">
+        <state line="35" column="0" selection-start="1165" selection-end="1165" vertical-scroll-proportion="0.0" vertical-offset="468" max-vertical-offset="880">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gjeasy/controls/daemon_main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="29" selection-start="536" selection-end="536" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="500">
-          <folding>
-            <element signature="e#13#56#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gjeasy/controls/get_msg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="4" selection-start="1534" selection-end="1598" vertical-scroll-proportion="0.0" vertical-offset="652" max-vertical-offset="1640">
+        <state line="43" column="0" selection-start="1411" selection-end="1411" vertical-scroll-proportion="0.0" vertical-offset="783" max-vertical-offset="1660">
           <folding>
             <element signature="e#13#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gjeasy/controls/daemon_main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="28" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0" vertical-offset="100" max-vertical-offset="580">
+          <folding>
+            <element signature="e#13#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gjeasy/models/account_setting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="60" selection-start="1422" selection-end="1422" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="1600">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gjeasy/controls/send_msg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="56" selection-start="1259" selection-end="1259" vertical-scroll-proportion="0.42492014" vertical-offset="394" max-vertical-offset="1020">
+        <state line="59" column="25" selection-start="2279" selection-end="2279" vertical-scroll-proportion="0.0776699" vertical-offset="1148" max-vertical-offset="1560">
           <folding>
             <element signature="e#13#42#0" expanded="true" />
           </folding>

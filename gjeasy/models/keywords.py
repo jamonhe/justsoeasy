@@ -32,7 +32,7 @@ class Keywords(object):
 
     @classmethod
     def get_search_words(cls, interval=300):
-        result =[ (word.get("word"), word.get("email_list")) for word in words_collection.find({"interval": 300}) ]
+        result =[(word.get("word"), word.get("email_list")) for word in words_collection.find({"interval": 300})]
 
         return result
 

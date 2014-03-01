@@ -2,6 +2,7 @@
 from datetime import datetime
 import time
 from gjeasy import logger
+from gjeasy.emails.send_mail import send_mail
 from gjeasy.models.account_setting import AccountSetting
 from gjeasy.models.news import News
 from gjeasy.utils.tranverse_time import trans_time
@@ -36,11 +37,37 @@ def need_send_weibo(email, name, weibo):
         return weibo
     return {}
 
-    #return "%s %s %s \n   %s" % (name, weibo["addr"], weibo["time"], weibo["content"])
+    #return "%s %s %s \n   %s" % (name, weibo["url"], weibo["time"], weibo["content"])
 
-def send_msg(email, keyword, name, content):
+def gen_news_str(news_list):
+    return "\n\n".join(
+        ["%s    %s %s \n   %s\n   %s" %
+         (news["title"], news["source"], news["time"], news["content"], news["url"]) for news in news_list
+        ])
+
+def gen_weibo_str(name, weibo):
+    return "%s %s %s \n   %s" % (name, weibo["url"], weibo["time"], weibo["content"])
+
+def send_msg(email_list, keyword, name, content):
     """
     : keyword: key word for searching news
     : name: weibo account
+    : content : a dict contain search results, such as {"news"[news1, news2], "weibo": weibo}
     """
-    pass
+    for email in email_list:
+        if content.has_key("news") and content["news"]:
+            send_news = need_send_news(email, keyword, content["news"])
+            if send_news:
+                news_str = gen_news_str(send_news)
+                subject = keyword + " 有新消息了^-^"
+                send_mail(email, subject, news_str)
+                AccountSetting.update_email_time(email, keyword, send_weibo["time"])
+
+        if content.has_key("weibo") and content["weibo"]:
+            send_weibo = need_send_weibo(email, name, content["weibo"])
+            if send_weibo:
+                weibo_str = gen_weibo_str(name, send_weibo)
+                subject = keyword + " 有新的微博动态了^-^"
+                send_mail(email, subject, news_str)
+                cur_time = time.time()
+                AccountSetting.update_email_time(email, name, send_weibo["time"])
