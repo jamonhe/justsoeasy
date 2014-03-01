@@ -1,23 +1,25 @@
 #coding=utf8
-from sqlalchemy import BIGINT, String, Integer, Column, ForeignKey
+from sqlalchemy import BIGINT, String, Integer, Column, ForeignKey, Sequence
+from sqlalchemy.orm import relationship
 from gjeasy.models.base import Base
 from gjeasy.models.session import sessionCM
 
 
 class AccountSetting(Base):
     __tablename__ = "account_setting"
-    __table_args__ = {"mysql_engine": "InnoDB", "charset": "utf8"}
+    __table_args__ = {"mysql_engine": "InnoDB"}
 
-    id = Column(BIGINT(unsigned=True), primary_key=True)
-    email = Column(String(50), nullable=False, index=True)
+    id = Column(Integer, Sequence("setting_id_seq"), primary_key=True)
+    email = relationship("Account", backref="keywords", order_by="Account.email")
+
     keyword = Column(String(100), nullable=False, index=True)
 
     #搜索的间隔
     interval = Column(Integer, default=300)
     #最近一次搜索时间
-    searched_time = Column(BIGINT(unsigned=True), default=0)
+    searched_time = Column(Integer, default=0)
     #最近一次发送邮件的时间
-    emailed_time = Column(BIGINT(unsigned=True), default=0)
+    emailed_time = Column(Integer, default=0)
 
     def __init__(self, email, keyword, **kwargs):
         self.email = email

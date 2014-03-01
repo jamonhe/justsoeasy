@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b59ee4c4-bb72-4611-b31b-7283c2d1cee7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gjeasy/models/create_mysql_table.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gjeasy/models/account.py" afterPath="$PROJECT_DIR$/gjeasy/models/account.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gjeasy/models/account_setting.py" afterPath="$PROJECT_DIR$/gjeasy/models/account_setting.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gjeasy/models/create_mysql_table.py" afterPath="$PROJECT_DIR$/gjeasy/models/create_mysql_table.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="justsoeasy.iws" />
@@ -22,7 +21,7 @@
     <SUITE FILE_PATH="coverage/justsoeasy$weibo_search.coverage" NAME="weibo_search Coverage Results" MODIFIED="1393421576699" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gjeasy/search" />
     <SUITE FILE_PATH="coverage/justsoeasy$run.coverage" NAME="run Coverage Results" MODIFIED="1392552144043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/justsoeasy$baidu_search__1_.coverage" NAME="baidu_search (1) Coverage Results" MODIFIED="1393422787724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gjeasy/search" />
-    <SUITE FILE_PATH="coverage/justsoeasy$create_mysql_table.coverage" NAME="create_mysql_table Coverage Results" MODIFIED="1393684723909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gjeasy/models" />
+    <SUITE FILE_PATH="coverage/justsoeasy$create_mysql_table.coverage" NAME="create_mysql_table Coverage Results" MODIFIED="1393686518534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gjeasy/models" />
     <SUITE FILE_PATH="coverage/justsoeasy$send_mail__1_.coverage" NAME="send_mail (1) Coverage Results" MODIFIED="1392544801525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/emails" />
     <SUITE FILE_PATH="coverage/justsoeasy$send_mail.coverage" NAME="send_mail Coverage Results" MODIFIED="1393422345142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gjeasy/emails" />
     <SUITE FILE_PATH="coverage/justsoeasy$base.coverage" NAME="base Coverage Results" MODIFIED="1392548951602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/views" />
@@ -89,7 +88,7 @@
       <file leaf-file-name="create_mysql_table.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gjeasy/models/create_mysql_table.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="27" selection-start="383" selection-end="383" vertical-scroll-proportion="0.70886075" vertical-offset="0" max-vertical-offset="400">
+            <state line="10" column="46" selection-start="281" selection-end="281" vertical-scroll-proportion="0.5063291" vertical-offset="0" max-vertical-offset="420">
               <folding />
             </state>
           </provider>
@@ -98,7 +97,7 @@
       <file leaf-file-name="schema.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://C:/Python27/Lib/site-packages/sqlalchemy/sql/schema.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3282" column="8" selection-start="128011" selection-end="128011" vertical-scroll-proportion="0.0" vertical-offset="65329" max-vertical-offset="67940">
+            <state line="1919" column="8" selection-start="76844" selection-end="76844" vertical-scroll-proportion="0.0" vertical-offset="37949" max-vertical-offset="67940">
               <folding />
             </state>
           </provider>
@@ -125,7 +124,7 @@
       <file leaf-file-name="account_setting.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gjeasy/models/account_setting.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="50" selection-start="2728" selection-end="2728" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1620">
+            <state line="9" column="46" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0" vertical-offset="29" max-vertical-offset="1640">
               <folding />
             </state>
           </provider>
@@ -170,10 +169,10 @@
         <option value="$PROJECT_DIR$/gjeasy/controls/send_msg.py" />
         <option value="$PROJECT_DIR$/gjeasy/controls/get_msg.py" />
         <option value="$PROJECT_DIR$/gjeasy/controls/daemon_main.py" />
-        <option value="$PROJECT_DIR$/gjeasy/models/account_setting.py" />
         <option value="$PROJECT_DIR$/gjeasy/utils/create_mysql_table.py" />
         <option value="$PROJECT_DIR$/gjeasy/models/account.py" />
         <option value="$PROJECT_DIR$/gjeasy/models/create_mysql_table.py" />
+        <option value="$PROJECT_DIR$/gjeasy/models/account_setting.py" />
       </list>
     </option>
   </component>
@@ -784,7 +783,11 @@
       <created>1393673981381</created>
       <updated>1393673981382</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="created table account">
+      <created>1393684875369</created>
+      <updated>1393684875369</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -829,7 +832,8 @@
     <MESSAGE value="add keywords" />
     <MESSAGE value="change to new structure" />
     <MESSAGE value="created basic structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="created basic structure" />
+    <MESSAGE value="created table account" />
+    <option name="LAST_COMMIT_MESSAGE" value="created table account" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -924,20 +928,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gjeasy/models/account_setting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="50" selection-start="2728" selection-end="2728" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1620">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/sqlalchemy/sql/schema.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3282" column="8" selection-start="128011" selection-end="128011" vertical-scroll-proportion="0.0" vertical-offset="65329" max-vertical-offset="67940">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gjeasy/models/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="0" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0" vertical-offset="49" max-vertical-offset="520">
@@ -961,9 +951,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/sqlalchemy/sql/schema.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1919" column="8" selection-start="76844" selection-end="76844" vertical-scroll-proportion="0.0" vertical-offset="37949" max-vertical-offset="67940">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gjeasy/models/account_setting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="46" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0" vertical-offset="29" max-vertical-offset="1640">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gjeasy/models/create_mysql_table.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="27" selection-start="383" selection-end="383" vertical-scroll-proportion="0.70886075" vertical-offset="0" max-vertical-offset="400">
+        <state line="10" column="46" selection-start="281" selection-end="281" vertical-scroll-proportion="0.5063291" vertical-offset="0" max-vertical-offset="420">
           <folding />
         </state>
       </provider>

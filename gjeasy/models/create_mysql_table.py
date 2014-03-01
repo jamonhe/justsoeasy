@@ -11,5 +11,6 @@ def create_table(table_names):
     metadata.create_all(mysql_db, need_tables)
 
 if __name__ == "__main__":
-    from gjeasy.models.account import Account
-    create_table("account")
+    #from gjeasy.models.account import Account
+    from gjeasy.models.account_setting import AccountSetting
+    create_table("account_setting")
