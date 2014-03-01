@@ -1,14 +1,15 @@
 #coding=utf8
-from sqlalchemy import BIGINT, String, Integer, Column
+from sqlalchemy import BIGINT, String, Integer, Column, ForeignKey
 from gjeasy.models.base import Base
 from gjeasy.models.session import sessionCM
 
 
 class AccountSetting(Base):
     __tablename__ = "account_setting"
+    __table_args__ = {"mysql_engine": "InnoDB", "charset": "utf8"}
 
     id = Column(BIGINT(unsigned=True), primary_key=True)
-    email = Column(String(50), nullable=False,  index=True)
+    email = Column(String(50), nullable=False, index=True)
     keyword = Column(String(100), nullable=False, index=True)
 
     #搜索的间隔
