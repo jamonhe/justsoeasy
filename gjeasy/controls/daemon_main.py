@@ -17,7 +17,12 @@ def daemon_main(interval=300):
     4. 将内容存入mongo中的content数据库;
     """
     words_emails = Keywords.get_search_words(interval)
+    print "word_emails=", words_emails
     for word, emails in words_emails:
         AccountSetting.update_search_time(emails, word, time.time())
-        latest_content = get_msg(word, word, interval)
-        send_msg(word, emails, latest_content)
+        latest_content = get_msg(word, word)
+        print latest_content
+        send_msg(emails, word, word, latest_content)
+
+if __name__ == "__main__":
+    daemon_main()

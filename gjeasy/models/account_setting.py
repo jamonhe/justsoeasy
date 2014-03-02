@@ -4,13 +4,15 @@ from sqlalchemy.orm import relationship
 from gjeasy.models.base import Base
 from gjeasy.models.session import sessionCM
 from gjeasy.models.account import Account
+from gjeasy.utils.coding_str import str2utf8
+
 
 class AccountSetting(Base):
     __tablename__ = "account_setting"
     __table_args__ = {"mysql_engine": "InnoDB", 'mysql_charset': 'utf8'}
 
     id = Column(Integer, Sequence("setting_id_seq"), primary_key=True)
-    email = Column(String(50), nullable=False, index=True, char_set="utf8")
+    email = Column(String(50), nullable=False, index=True)
 
     keyword = Column(String(100), nullable=False, index=True)
 
@@ -32,13 +34,14 @@ class AccountSetting(Base):
          add new search words for one email
         """
         with sessionCM() as session:
+            add_word_list = [str2utf8(word)[0] for word in add_word_list]
             ret = session.query(AccountSetting).filter_by(email=email)\
                 .filter(AccountSetting.keyword.in_(add_word_list)).all()
-            exist_words = [a.keyword for a in ret]
-            if ret:
-                print exist_words, type(ret[0].keyword), type(ret[0].email)
+            exist_words = [str2utf8(a.keyword)[0] for a in ret]
+            #if ret:
+            #    print exist_words, type(ret[0].keyword), type(ret[0].email)
             need_add_words = list(set(add_word_list) - set(exist_words))
-            print need_add_words, add_word_list
+            #print need_add_words, add_word_list
             for word in need_add_words:
                 new_setting = cls(email=email, keyword=word)
                 session.add(new_setting)
@@ -50,6 +53,7 @@ class AccountSetting(Base):
     def update_search_time(cls, email_list, keyword, timestamp):
         """
         update searched_time
+        :keyword must be utf8
         """
         with sessionCM() as session:
             for email in email_list:
@@ -61,6 +65,7 @@ class AccountSetting(Base):
     def update_email_time(cls, email, keyword, timestamp):
         """
         update emailed_time
+        : keyword must be utf8
         """
         with sessionCM() as session:
             account_setting = session.query(AccountSetting).filter_by(email=email, keyword=keyword).first()
@@ -72,7 +77,7 @@ class AccountSetting(Base):
         """
          return searched_time, emailed_time
         : email: AccountSetting email
-        : keyword: key word of search news/weibo... ,
+        : keyword: key word of search news/weibo... ; must be utf8
         : timestamp: timestamp of search result
         """
         with sessionCM() as session:

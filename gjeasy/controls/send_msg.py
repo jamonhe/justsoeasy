@@ -4,7 +4,6 @@ import time
 from gjeasy import logger
 from gjeasy.emails.send_mail import send_mail
 from gjeasy.models.account_setting import AccountSetting
-from gjeasy.models.news import News
 from gjeasy.utils.tranverse_time import trans_time
 
 
@@ -18,7 +17,7 @@ def need_send_news(email, keyword, news_list):
     need_send_news = []
     last_search_time, last_email_time = AccountSetting.get_last_time(email, keyword)
     for news in news_list:
-        if last_search_time <= news["time"] and last_search_time >= last_email_time:
+        if last_search_time <= trans_time(news["time"]) and last_search_time >= last_email_time:
             need_send_news.append(news)
 
         #send_news.append("%s    %s %s \n   %s\n   %s" %
@@ -33,7 +32,7 @@ def need_send_weibo(email, name, weibo):
     """
     need_send_weibo = {}
     last_search_time, last_email_time = AccountSetting.get_last_time(email, name)
-    if last_search_time <= weibo["time"] and last_search_time >= last_email_time:
+    if last_search_time <= trans_time(weibo["time"]) and last_search_time >= last_email_time:
         return weibo
     return {}
 
@@ -60,8 +59,9 @@ def send_msg(email_list, keyword, name, content):
             if send_news:
                 news_str = gen_news_str(send_news)
                 subject = keyword + " 有新消息了^-^"
+                cur_time = int(time.time())
                 send_mail(email, subject, news_str)
-                AccountSetting.update_email_time(email, keyword, send_weibo["time"])
+                AccountSetting.update_email_time(email, keyword, cur_time)
 
         if content.has_key("weibo") and content["weibo"]:
             send_weibo = need_send_weibo(email, name, content["weibo"])
@@ -69,5 +69,5 @@ def send_msg(email_list, keyword, name, content):
                 weibo_str = gen_weibo_str(name, send_weibo)
                 subject = keyword + " 有新的微博动态了^-^"
                 send_mail(email, subject, news_str)
-                cur_time = time.time()
-                AccountSetting.update_email_time(email, name, send_weibo["time"])
+                cur_time = int(time.time())
+                AccountSetting.update_email_time(email, name, cur_time)

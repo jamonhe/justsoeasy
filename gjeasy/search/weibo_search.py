@@ -8,6 +8,7 @@ import urllib2
 import cookielib
 import mechanize
 from BeautifulSoup import BeautifulSoup
+from gjeasy.utils.coding_str import str2utf8
 
 WEIBO_BASE_URL = "http://s.weibo.com/weibo/"
 
@@ -35,14 +36,14 @@ def search_weibo(keyword):
         return
 
     new_weibo = {}
-    encode_words = urllib.quote(keyword.encode("utf-8"))
+    encode_words = urllib.quote(str2utf8(keyword)[0])
     url = "%s%s" % (WEIBO_BASE_URL, encode_words)
 
     result = br.open(url).read()
 
     soup = BeautifulSoup(result)
     new_weibo["url"] = soup.find("p", {"class": "person_addr"}).a.string
-    new_weibo["content"] = [p.text for p in soup.findAll("div", {"class": "person_newwb"})]
+    new_weibo["content"] = "\n\n".join([p.text for p in soup.findAll("div", {"class": "person_newwb"})])
     year = "%s-" % datetime.now().year
     new_weibo["time"] = year + soup.find("div", {"class": "person_newwb"}).p.findAll("a")[-1].text\
         .strip("(").strip(")").replace(u"月", "-").replace(u"日", "").strip(" ") + ":00"

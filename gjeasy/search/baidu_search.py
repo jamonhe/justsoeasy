@@ -28,7 +28,7 @@ def search_news(keyword=None, num=5):
     : content: news content
     : time:  news publish time
     """
-    if not keywords:
+    if not keyword:
         return
     #print keywords
 

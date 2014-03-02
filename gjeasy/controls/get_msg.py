@@ -11,7 +11,7 @@ from gjeasy.search.baidu_search import search_news
 from gjeasy.search.weibo_search import search_weibo
 from gjeasy.utils.tranverse_time import trans_time
 
-MAX_LONG_TIME = 100000
+MAX_LONG_TIME = 500000
 
 def can_send_news(keyword, news_list):
     """
@@ -24,7 +24,6 @@ def can_send_news(keyword, news_list):
     logger.debug("found %s news" % len(news_list))
     for news in news_list:
         ret, is_created = News.create(keyword, news)
-        ret["time"] = trans_time(ret.get("time"))
         if not is_created and ret["time"] < current_time - MAX_LONG_TIME:
             break
         send_news.append(news)
@@ -42,7 +41,7 @@ def can_send_weibo(name, weibo):
         return None
     return weibo
 
-def get_msg(keyword=None, name=None, interval=200000):
+def get_msg(keyword=None, name=None):
     """
      return grab message and took some filter(如果新闻或微博内容数据库中木有，则返回；
         如果有且发布时间在MAX_LONG_TIME 以内，也返回；其他过滤掉)
@@ -54,8 +53,9 @@ def get_msg(keyword=None, name=None, interval=200000):
             return {}
         send_contents = {}
         news_list = search_news(keyword)
+        #print "origin=", news_list
         send_contents["news"] = can_send_news(keyword, news_list)
-
+        #print "news=", send_contents["news"]
         if name:
             weibo = search_weibo(name)
             ret = can_send_weibo(name, weibo)

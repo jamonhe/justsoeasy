@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b59ee4c4-bb72-4611-b31b-7283c2d1cee7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gjeasy/models/account.py" afterPath="$PROJECT_DIR$/gjeasy/models/account.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gjeasy/models/account_setting.py" afterPath="$PROJECT_DIR$/gjeasy/models/account_setting.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gjeasy/search/baidu_search.py" afterPath="$PROJECT_DIR$/gjeasy/search/baidu_search.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gjeasy/controls/daemon_main.py" afterPath="$PROJECT_DIR$/gjeasy/controls/daemon_main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gjeasy/controls/get_msg.py" afterPath="$PROJECT_DIR$/gjeasy/controls/get_msg.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gjeasy/models/keywords.py" afterPath="$PROJECT_DIR$/gjeasy/models/keywords.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gjeasy/controls/send_msg.py" afterPath="$PROJECT_DIR$/gjeasy/controls/send_msg.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gjeasy/utils/tranverse_time.py" afterPath="$PROJECT_DIR$/gjeasy/utils/tranverse_time.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gjeasy/search/weibo_search.py" afterPath="$PROJECT_DIR$/gjeasy/search/weibo_search.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="justsoeasy.iws" />
@@ -18,16 +23,18 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/justsoeasy$baidu_search.coverage" NAME="baidu_search Coverage Results" MODIFIED="1392549443910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/search" />
-    <SUITE FILE_PATH="coverage/justsoeasy$account.coverage" NAME="account Coverage Results" MODIFIED="1393689310141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gjeasy/models" />
-    <SUITE FILE_PATH="coverage/justsoeasy$weibo_search.coverage" NAME="weibo_search Coverage Results" MODIFIED="1393421576699" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gjeasy/search" />
+    <SUITE FILE_PATH="coverage/justsoeasy$weibo_search.coverage" NAME="weibo_search Coverage Results" MODIFIED="1393774560234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gjeasy/search" />
     <SUITE FILE_PATH="coverage/justsoeasy$run.coverage" NAME="run Coverage Results" MODIFIED="1392552144043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/justsoeasy$baidu_search__1_.coverage" NAME="baidu_search (1) Coverage Results" MODIFIED="1393422787724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gjeasy/search" />
-    <SUITE FILE_PATH="coverage/justsoeasy$create_mysql_table.coverage" NAME="create_mysql_table Coverage Results" MODIFIED="1393688750327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gjeasy/models" />
-    <SUITE FILE_PATH="coverage/justsoeasy$send_mail__1_.coverage" NAME="send_mail (1) Coverage Results" MODIFIED="1392544801525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/emails" />
-    <SUITE FILE_PATH="coverage/justsoeasy$send_mail.coverage" NAME="send_mail Coverage Results" MODIFIED="1393422345142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gjeasy/emails" />
+    <SUITE FILE_PATH="coverage/justsoeasy$create_mysql_table.coverage" NAME="create_mysql_table Coverage Results" MODIFIED="1393771954244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gjeasy/models" />
     <SUITE FILE_PATH="coverage/justsoeasy$base.coverage" NAME="base Coverage Results" MODIFIED="1392548951602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/views" />
     <SUITE FILE_PATH="coverage/justsoeasy$keywords.coverage" NAME="keywords Coverage Results" MODIFIED="1393430581176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gjeasy/controls" />
-    <SUITE FILE_PATH="coverage/justsoeasy$account_setting.coverage" NAME="account_setting Coverage Results" MODIFIED="1393692065521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gjeasy/models" />
+    <SUITE FILE_PATH="coverage/justsoeasy$daemon_main.coverage" NAME="daemon_main Coverage Results" MODIFIED="1393776010532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gjeasy/controls" />
+    <SUITE FILE_PATH="coverage/justsoeasy$keywords__1_.coverage" NAME="keywords (1) Coverage Results" MODIFIED="1393773247737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gjeasy/models" />
+    <SUITE FILE_PATH="coverage/justsoeasy$account.coverage" NAME="account Coverage Results" MODIFIED="1393689310141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gjeasy/models" />
+    <SUITE FILE_PATH="coverage/justsoeasy$send_mail__1_.coverage" NAME="send_mail (1) Coverage Results" MODIFIED="1392544801525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/emails" />
+    <SUITE FILE_PATH="coverage/justsoeasy$send_mail.coverage" NAME="send_mail Coverage Results" MODIFIED="1393422345142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gjeasy/emails" />
+    <SUITE FILE_PATH="coverage/justsoeasy$account_setting.coverage" NAME="account_setting Coverage Results" MODIFIED="1393772007639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gjeasy/models" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -44,10 +51,26 @@
       <file leaf-file-name="get_msg.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gjeasy/controls/get_msg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="34" selection-start="810" selection-end="810" vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="1660">
-              <folding>
-                <element signature="e#13#42#0" expanded="true" />
-              </folding>
+            <state line="73" column="4" selection-start="2287" selection-end="2287" vertical-scroll-proportion="0.0" vertical-offset="1072" max-vertical-offset="1460">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="weibo_search.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gjeasy/search/weibo_search.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="4" selection-start="1640" selection-end="1640" vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="1740">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="weibo.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gjeasy/models/weibo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="8" selection-start="735" selection-end="735" vertical-scroll-proportion="0.0" vertical-offset="489" max-vertical-offset="960">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -55,85 +78,68 @@
       <file leaf-file-name="news.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gjeasy/models/news.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="31" selection-start="1433" selection-end="1433" vertical-scroll-proportion="0.0" vertical-offset="509" max-vertical-offset="1000">
+            <state line="29" column="8" selection-start="851" selection-end="851" vertical-scroll-proportion="0.0" vertical-offset="571" max-vertical-offset="1000">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tranverse_time.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="gjeasy.log" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/log/gjeasy.log">
+          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="335" column="4" selection-start="20664" selection-end="20664" vertical-scroll-proportion="-5.0" vertical-offset="6565" max-vertical-offset="6920">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="send_msg.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gjeasy/controls/send_msg.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="37" selection-start="698" selection-end="698" vertical-scroll-proportion="0.0" vertical-offset="169" max-vertical-offset="1560">
+              <folding>
+                <element signature="e#13#42#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tranverse_time.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gjeasy/utils/tranverse_time.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="4" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="220">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="account.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gjeasy/models/account.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="4" selection-start="428" selection-end="501" vertical-scroll-proportion="0.0" vertical-offset="265" max-vertical-offset="1040">
+            <state line="6" column="4" selection-start="107" selection-end="107" vertical-scroll-proportion="0.30927834" vertical-offset="0" max-vertical-offset="388">
               <folding>
-                <element signature="e#14#77#0" expanded="true" />
+                <element signature="e#13#42#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create_mysql_table.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gjeasy/models/create_mysql_table.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="6" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-              <folding>
-                <marker date="1393685248618" expanded="true" signature="95:281" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="schema.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://C:/Python27/Lib/site-packages/sqlalchemy/sql/schema.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="961" column="28" selection-start="39975" selection-end="39979" vertical-scroll-proportion="9.115385" vertical-offset="19217" max-vertical-offset="67940">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://C:/Python27/Lib/site-packages/sqlalchemy/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="65" max-vertical-offset="580">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gjeasy/models/base.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="20" selection-start="817" selection-end="817" vertical-scroll-proportion="0.0" vertical-offset="29" max-vertical-offset="520">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="account_setting.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="account_setting.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gjeasy/models/account_setting.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="14" selection-start="478" selection-end="478" vertical-scroll-proportion="0.5949367" vertical-offset="5" max-vertical-offset="1840">
-              <folding>
-                <element signature="e#13#89#0" expanded="true" />
-              </folding>
+            <state line="91" column="4" selection-start="3306" selection-end="3306" vertical-scroll-proportion="0.0" vertical-offset="1452" max-vertical-offset="1840">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="configure.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gjeasy/config/configure.py">
+      <file leaf-file-name="daemon_main.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gjeasy/controls/daemon_main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="13" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="500">
+            <state line="24" column="13" selection-start="817" selection-end="817" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="keywords.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gjeasy/models/keywords.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="21" selection-start="1494" selection-end="1494" vertical-scroll-proportion="0.0" vertical-offset="325" max-vertical-offset="960">
               <folding />
             </state>
           </provider>
@@ -157,28 +163,27 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/gjeasy/search/baidu_search.py" />
-        <option value="$PROJECT_DIR$/gjeasy/search/weibo_search.py" />
-        <option value="$PROJECT_DIR$/gjeasy/utils/tranverse_time.py" />
-        <option value="$PROJECT_DIR$/gjeasy/models/weibo.py" />
-        <option value="$PROJECT_DIR$/gjeasy/models/news.py" />
         <option value="$PROJECT_DIR$/gjeasy/controls/get_messages.py" />
         <option value="$PROJECT_DIR$/gjeasy/controls/filter_msg.py" />
-        <option value="$PROJECT_DIR$/gjeasy/models/keywords.py" />
-        <option value="$PROJECT_DIR$/gjeasy/controls/send_msg.py" />
-        <option value="$PROJECT_DIR$/gjeasy/controls/daemon_main.py" />
         <option value="$PROJECT_DIR$/gjeasy/utils/create_mysql_table.py" />
         <option value="$PROJECT_DIR$/gjeasy/models/create_mysql_table.py" />
         <option value="$PROJECT_DIR$/gjeasy/models/account.py" />
-        <option value="$PROJECT_DIR$/gjeasy/controls/get_msg.py" />
         <option value="$PROJECT_DIR$/gjeasy/models/base.py" />
+        <option value="C:/Python27/Lib/site-packages/pymongo/mongo_client.py" />
+        <option value="$PROJECT_DIR$/gjeasy/models/keywords.py" />
+        <option value="$PROJECT_DIR$/gjeasy/search/baidu_search.py" />
+        <option value="$PROJECT_DIR$/gjeasy/search/weibo_search.py" />
+        <option value="$PROJECT_DIR$/gjeasy/controls/get_msg.py" />
         <option value="$PROJECT_DIR$/gjeasy/models/account_setting.py" />
+        <option value="$PROJECT_DIR$/gjeasy/controls/daemon_main.py" />
+        <option value="$PROJECT_DIR$/log/gjeasy.log" />
+        <option value="$PROJECT_DIR$/gjeasy/controls/send_msg.py" />
+        <option value="$PROJECT_DIR$/gjeasy/utils/tranverse_time.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="17" />
+    <option name="y" value="11" />
     <option name="width" value="1269" />
     <option name="height" value="788" />
   </component>
@@ -208,7 +213,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -237,7 +241,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="gjeasy" />
+              <option name="myItemId" value="log" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -252,10 +256,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="gjeasy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -327,59 +327,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="emails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="justsoeasy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="easy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gjeasy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="controls" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="justsoeasy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="easy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gjeasy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonSdkConfigurable" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonSdkConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -399,64 +364,7 @@
       <recent name="F:\git\easy\gjeasy" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.account_setting">
-    <configuration default="false" name="baidu_search (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/gjeasy/search" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="justsoeasy" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gjeasy/search/baidu_search.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="keywords" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/gjeasy/controls" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="justsoeasy" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gjeasy/controls/keywords.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="account" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/gjeasy/models" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="justsoeasy" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gjeasy/models/account.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.daemon_main">
     <configuration default="false" name="create_mysql_table" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -490,6 +398,63 @@
       <module name="justsoeasy" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gjeasy/models/account_setting.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="keywords (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/gjeasy/models" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="justsoeasy" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gjeasy/models/keywords.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="daemon_main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/gjeasy/controls" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="justsoeasy" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gjeasy/controls/daemon_main.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="weibo_search" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/gjeasy/search" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="justsoeasy" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gjeasy/search/weibo_search.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -579,6 +544,9 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -600,9 +568,6 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -646,19 +611,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.baidu_search (1)" />
-      <item index="1" class="java.lang.String" itemvalue="Python.keywords" />
-      <item index="2" class="java.lang.String" itemvalue="Python.account" />
-      <item index="3" class="java.lang.String" itemvalue="Python.create_mysql_table" />
-      <item index="4" class="java.lang.String" itemvalue="Python.account_setting" />
+      <item index="0" class="java.lang.String" itemvalue="Python.create_mysql_table" />
+      <item index="1" class="java.lang.String" itemvalue="Python.account_setting" />
+      <item index="2" class="java.lang.String" itemvalue="Python.keywords (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Python.daemon_main" />
+      <item index="4" class="java.lang.String" itemvalue="Python.weibo_search" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.account_setting" />
-        <item index="1" class="java.lang.String" itemvalue="Python.account" />
-        <item index="2" class="java.lang.String" itemvalue="Python.create_mysql_table" />
-        <item index="3" class="java.lang.String" itemvalue="Python.keywords" />
-        <item index="4" class="java.lang.String" itemvalue="Python.baidu_search (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Python.daemon_main" />
+        <item index="1" class="java.lang.String" itemvalue="Python.weibo_search" />
+        <item index="2" class="java.lang.String" itemvalue="Python.keywords (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.account_setting" />
+        <item index="4" class="java.lang.String" itemvalue="Python.create_mysql_table" />
       </list>
     </recent_temporary>
   </component>
@@ -791,29 +756,33 @@
       <created>1393686943971</created>
       <updated>1393686943971</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="created table account">
+      <created>1393692148086</created>
+      <updated>1393692148086</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="17" width="1269" height="788" extended-state="0" />
+    <frame x="0" y="11" width="1269" height="788" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32874617" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18994413" sideWeight="0.6819572" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18994413" sideWeight="0.6712538" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3180428" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3180428" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32721713" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959327" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -845,128 +814,121 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/gjeasy/models/create_mysql_table.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="9" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gjeasy/models/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="395">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/pymongo/mongo_client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="113" column="29" selection-start="3943" selection-end="3945" vertical-scroll-proportion="-4.730769" vertical-offset="1677" max-vertical-offset="26400">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gjeasy/logger.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2180">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gjeasy/search/baidu_search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="16" selection-start="673" selection-end="673" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="2660">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gjeasy/models/news.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="8" selection-start="851" selection-end="851" vertical-scroll-proportion="0.0" vertical-offset="571" max-vertical-offset="1000">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gjeasy/models/weibo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="8" selection-start="735" selection-end="735" vertical-scroll-proportion="0.0" vertical-offset="489" max-vertical-offset="960">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gjeasy/models/keywords.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1165" selection-end="1165" vertical-scroll-proportion="0.0" vertical-offset="468" max-vertical-offset="880">
+        <state line="41" column="21" selection-start="1494" selection-end="1494" vertical-scroll-proportion="0.0" vertical-offset="565" max-vertical-offset="960">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gjeasy/controls/send_msg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="37" selection-start="698" selection-end="698" vertical-scroll-proportion="0.0" vertical-offset="169" max-vertical-offset="1560">
+          <folding>
+            <element signature="e#13#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/gjeasy.log">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="335" column="4" selection-start="20664" selection-end="20664" vertical-scroll-proportion="-5.0" vertical-offset="6565" max-vertical-offset="6920">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gjeasy/controls/daemon_main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="28" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0" vertical-offset="100" max-vertical-offset="580">
-          <folding>
-            <element signature="e#13#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gjeasy/controls/send_msg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="50" selection-start="2784" selection-end="2784" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1560">
-          <folding>
-            <element signature="e#13#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gjeasy/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="140">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/sqlalchemy/engine/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="4" selection-start="2761" selection-end="2761" vertical-scroll-proportion="-8.63038" vertical-offset="4609" max-vertical-offset="6900">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/sqlalchemy/connectors/mysqldb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="327" selection-end="327" vertical-scroll-proportion="0.4556962" vertical-offset="0" max-vertical-offset="3380">
-          <folding>
-            <element signature="e#333#356#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/sqlalchemy/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="580">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gjeasy/config/configure.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="500">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gjeasy/models/account.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="4" selection-start="428" selection-end="501" vertical-scroll-proportion="0.0" vertical-offset="265" max-vertical-offset="1040">
-          <folding>
-            <element signature="e#14#77#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gjeasy/models/create_mysql_table.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="6" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-          <folding>
-            <marker date="1393685248618" expanded="true" signature="95:281" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gjeasy/models/news.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="31" selection-start="1433" selection-end="1433" vertical-scroll-proportion="0.0" vertical-offset="509" max-vertical-offset="1000">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gjeasy/utils/tranverse_time.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="4" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="220">
+        <state line="24" column="13" selection-start="817" selection-end="817" vertical-scroll-proportion="0.0" vertical-offset="145" max-vertical-offset="540">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gjeasy/controls/get_msg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="34" selection-start="810" selection-end="810" vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="1660">
-          <folding>
-            <element signature="e#13#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/sqlalchemy/sql/schema.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="961" column="28" selection-start="39975" selection-end="39979" vertical-scroll-proportion="9.115385" vertical-offset="19217" max-vertical-offset="67940">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gjeasy/models/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="20" selection-start="817" selection-end="817" vertical-scroll-proportion="0.0" vertical-offset="29" max-vertical-offset="520">
+        <state line="73" column="4" selection-start="2287" selection-end="2287" vertical-scroll-proportion="0.0" vertical-offset="1072" max-vertical-offset="1460">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gjeasy/models/account_setting.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="14" selection-start="478" selection-end="478" vertical-scroll-proportion="0.5949367" vertical-offset="5" max-vertical-offset="1840">
+        <state line="91" column="4" selection-start="3306" selection-end="3306" vertical-scroll-proportion="0.0" vertical-offset="1452" max-vertical-offset="1840">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gjeasy/search/weibo_search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="4" selection-start="1640" selection-end="1640" vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="1740">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gjeasy/utils/tranverse_time.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="4" selection-start="107" selection-end="107" vertical-scroll-proportion="0.30927834" vertical-offset="0" max-vertical-offset="388">
           <folding>
-            <element signature="e#13#89#0" expanded="true" />
+            <element signature="e#13#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
