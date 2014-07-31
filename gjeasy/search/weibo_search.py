@@ -7,7 +7,7 @@ import urllib
 import urllib2
 import cookielib
 import mechanize
-from BeautifulSoup import BeautifulSoup
+from bs4 import BeautifulSoup
 from gjeasy.utils.coding_str import str2utf8
 
 WEIBO_BASE_URL = "http://s.weibo.com/weibo/"

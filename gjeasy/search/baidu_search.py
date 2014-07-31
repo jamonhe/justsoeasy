@@ -8,7 +8,7 @@ import urllib
 import urllib2
 import cookielib
 import mechanize
-from BeautifulSoup import BeautifulSoup
+from bs4 import BeautifulSoup
 from datetime import datetime
 from gjeasy.logger import logger
 import time
@@ -30,7 +30,7 @@ def search_news(keyword=None, num=5):
     """
     if not keyword:
         return
-    #print keywords
+    print "search_news=", keyword
 
     cj = cookielib.LWPCookieJar()
     br.set_cookiejar(cj)
@@ -44,7 +44,7 @@ def search_news(keyword=None, num=5):
 
     search_words = urllib.quote(str2utf8(keyword)[0])
     url = "%sword=%s" % (BAIDU_BASE_URL["news"], search_words)
-    #print url
+    print "url=",url
     result = br.open(url).read()
 
     soup = BeautifulSoup(result)
