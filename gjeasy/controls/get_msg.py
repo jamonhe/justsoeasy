@@ -49,15 +49,11 @@ def get_msg(keyword=None, name=None):
     : name: weibo account
     """
     try:
-        print "aaaaaaaaa"
         if not keyword and not name:
             return {}
         send_contents = {}
-        print "bbbbbbbbb"
         news_list = search_news(keyword)
-        print "origin=", news_list
         send_contents["news"] = can_send_news(keyword, news_list)
-        print "news=", send_contents["news"]
         if name:
             weibo = search_weibo(name)
             ret = can_send_weibo(name, weibo)

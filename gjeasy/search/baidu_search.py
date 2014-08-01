@@ -30,7 +30,6 @@ def search_news(keyword=None, num=5):
     """
     if not keyword:
         return
-    print "search_news=", keyword
 
     cj = cookielib.LWPCookieJar()
     br.set_cookiejar(cj)
@@ -42,7 +41,8 @@ def search_news(keyword=None, num=5):
     br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(), max_time=1)
     br.addheaders = [('User-agent', 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008071615 Fedora/3.0.1-1.fc9 Firefox/3.0.1')]
 
-    search_words = urllib.quote(str2utf8(keyword)[0])
+    words = '+'.join(keyword)
+    search_words = urllib.quote(str2utf8(words)[0])
     url = "%sword=%s" % (BAIDU_BASE_URL["news"], search_words)
     print "url=",url
     result = br.open(url).read()
@@ -55,11 +55,15 @@ def search_news(keyword=None, num=5):
             news["title"] = c.a.text.strip()
             news["url"] = c.a.get("href")
             news["images"] = [img.get("src") for img in c.findAll("img")]
+            decode_content = str2utf8(c.span.text)[0].decode("utf-8")\
+                .replace("&nbsp;", " ").replace(u"\xa0", " ").strip()
 
-            temp = c.span.text.replace("&nbsp;", " ").strip().split(" ", 1)
-            if len(temp) != 2:
+            temp = decode_content.rsplit(' ', 2)
+            if len(temp) != 3:
                 continue
-            news["source"], news["time"] = temp
+
+            news["source"], day, time = temp
+            news["time"] = day +" " + time
             news["content"] = c.find("div", {"class": "c-summary"}).text\
                 .replace(u"&nbsp;百度快照", "").strip()
             news_list.append(news)
@@ -76,14 +80,15 @@ def search_news(keyword=None, num=5):
 
 if __name__=="__main__":
     keywords = [u"姚贝娜"]
-    result = search_news(keywords=keywords)
+    result = search_news(keyword=keywords)
 
     print len(result)
     for ret in result:
         print ret["title"], " ", ret["source"]
         print ret["time"], ret["url"], ret["images"]
         print "    ", ret["content"], "\n\n"
-    #
+
+    print u"\xa0\xa0", "tttttttttt"
     ##str = "2014-02-13 10:33:00"
     #
     str = """
@@ -123,6 +128,6 @@ if __name__=="__main__":
 		</a>
 	</div>
 </li>"""
-    import requests
-    url = "http://115.29.142.18:8880/?word=%s" % (urllib.quote(u"姚贝娜".encode("utf-8")))
-    requests.get(url)
+    #import requests
+    #url = "http://115.29.142.18:8880/?word=%s" % (urllib.quote(u"姚贝娜".encode("utf-8")))
+    #requests.get(url)
