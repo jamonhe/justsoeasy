@@ -16,6 +16,6 @@ MYSQL_DB = "gjeasy"
 MYSQL_USER = "gjeasy"
 MYSQL_PASSWORD = "test168"
 
-MONGO_HOST = "www.gjeasy.com"
+MONGO_HOST = "23.88.247.190"
 MONGO_PORT = 27017
 MONGO_DBS = {"news": "news", "weibo": "weibo", "keywords": "keywords"}
