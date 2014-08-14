@@ -10,12 +10,12 @@ if current_env == "development":
 else:
     LOG_FILE = "/home/easy/log/gjeasy/gjeasy.log"
 
-MYSQL_HOST = "www.gjeasy.com"
-MYSQL_PORT = 3306
+MYSQL_HOST = "210.209.116.198" #"www.gjeasy.com"
+MYSQL_PORT = 3307
 MYSQL_DB = "gjeasy"
 MYSQL_USER = "gjeasy"
 MYSQL_PASSWORD = "test168"
 
-MONGO_HOST = "23.88.247.190"
-MONGO_PORT = 27017
+MONGO_HOST = "210.209.116.198"
+MONGO_PORT = 25678
 MONGO_DBS = {"news": "news", "weibo": "weibo", "keywords": "keywords"}

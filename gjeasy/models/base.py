@@ -17,7 +17,7 @@ metadata = Base.metadata
 #: 是否在标准输出流打印sql语句(sqlalchemy)
 echo = False
 mysql_db = SA.create_engine(
-        'mysql://%s:%s@%s/%s?charset=utf8' % (MYSQL_USER, MYSQL_PASSWORD, MYSQL_HOST, MYSQL_DB),
+        'mysql://%s:%s@%s:%s/%s?charset=utf8' % (MYSQL_USER, MYSQL_PASSWORD, MYSQL_HOST, MYSQL_PORT, MYSQL_DB),
         echo=echo,
         pool_recycle=3600,
         pool_size=15
