@@ -21,7 +21,7 @@ def daemon_main(interval=300):
     for word, emails in words_emails:
         AccountSetting.update_search_time(emails, word, time.time())
         latest_content = get_msg(word, word)
-        print latest_content
+        print "content", latest_content
         send_msg(emails, word, word, latest_content)
 
 if __name__ == "__main__":

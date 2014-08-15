@@ -45,7 +45,7 @@ def get_msg(keyword=None, name=None):
     """
      return grab message and took some filter(如果新闻或微博内容数据库中木有，则返回；
         如果有且发布时间在MAX_LONG_TIME 以内，也返回；其他过滤掉)
-    : keyword: key word for searching news
+    : keyword: key word list for searching news
     : name: weibo account
     """
     try:
@@ -53,6 +53,7 @@ def get_msg(keyword=None, name=None):
             return {}
         send_contents = {}
         news_list = search_news(keyword)
+        print news_list
         send_contents["news"] = can_send_news(keyword, news_list)
         if name:
             weibo = search_weibo(name)

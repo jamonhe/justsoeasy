@@ -14,3 +14,4 @@ if __name__ == "__main__":
     #from gjeasy.models.account import Account
     from gjeasy.models.account_setting import AccountSetting
     create_table("account")
+    create_table("account_setting")

@@ -30,7 +30,7 @@ def search_news(keyword=None, num=5):
     """
     if not keyword:
         return
-
+    print "baidu keywords=", keyword
     cj = cookielib.LWPCookieJar()
     br.set_cookiejar(cj)
     br.set_handle_equiv(True)
@@ -59,13 +59,14 @@ def search_news(keyword=None, num=5):
                 .replace("&nbsp;", " ").replace(u"\xa0", " ").strip()
 
             temp = decode_content.rsplit(' ', 2)
+            print "temp=", decode_content
             if len(temp) != 3:
                 continue
 
             news["source"], day, time = temp
             news["time"] = day +" " + time
             news["content"] = c.find("div", {"class": "c-summary"}).text\
-                .replace(u"&nbsp;百度快照", "").strip()
+                .replace(u"- 百度快照", "").strip()
             news_list.append(news)
         except AttributeError, e:
             logger.warning(e)

@@ -40,8 +40,8 @@ def need_send_weibo(email, name, weibo):
 
 def gen_news_str(news_list):
     return "\n\n".join(
-        ["%s    %s %s \n   %s\n   %s" %
-         (news["title"], news["source"], news["time"], news["content"], news["url"]) for news in news_list
+        ['<a href="%s"> %s </a>    %s %s \n   %s\n' %
+         (news["url"], news["title"], news["source"], news["time"], news["content"]) for news in news_list
         ])
 
 def gen_weibo_str(name, weibo):
