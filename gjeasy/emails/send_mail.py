@@ -16,7 +16,8 @@ default_mail_param = {
 
 def send_mail(to_list, subject, content, mail_param=default_mail_param):
     me = "<" + mail_param["mail_user"].rsplit("@", 1)[0] + "@" + mail_param["mail_postfix"] + ">"
-    msg = MIMEText(content, _subtype='plain', _charset='utf8')
+    # msg = MIMEText(content, _subtype='plain', _charset='utf8')
+    msg = MIMEText(content,_subtype='html',_charset='utf8')
     msg['Subject'] = subject
     msg['From'] = me
     msg['To'] = ";".join(to_list)

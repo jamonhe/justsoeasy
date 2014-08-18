@@ -39,8 +39,8 @@ def need_send_weibo(email, name, weibo):
     #return "%s %s %s \n   %s" % (name, weibo["url"], weibo["time"], weibo["content"])
 
 def gen_news_str(news_list):
-    return "\n\n".join(
-        ['<a href="%s"> %s </a>    %s %s \n   %s\n' %
+    return "<br><br>".join(
+        ['<a href="%s"> %s </a>    %s %s <br>   %s<br>' %
          (news["url"], news["title"], news["source"], news["time"], news["content"]) for news in news_list
         ])
 
@@ -58,7 +58,7 @@ def send_msg(email_list, keyword, name, content):
             send_news = need_send_news(email, keyword, content["news"])
             if send_news:
                 news_str = gen_news_str(send_news)
-                subject = keyword + " 有新消息了^-^"
+                subject = "%s 有新消息了^-^" % '+'.join(keyword)
                 cur_time = int(time.time())
                 send_mail(email, subject, news_str)
                 AccountSetting.update_email_time(email, keyword, cur_time)

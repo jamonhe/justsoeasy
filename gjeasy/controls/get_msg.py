@@ -24,8 +24,10 @@ def can_send_news(keyword, news_list):
     logger.debug("found %s news" % len(news_list))
     for news in news_list:
         ret, is_created = News.create(keyword, news)
+        print ret["time"], is_created, current_time - MAX_LONG_TIME
+        print "ret=",ret
         if not is_created and ret["time"] < current_time - MAX_LONG_TIME:
-            break
+            continue
         send_news.append(news)
     return send_news
 
@@ -55,11 +57,11 @@ def get_msg(keyword=None, name=None):
         news_list = search_news(keyword)
         print news_list
         send_contents["news"] = can_send_news(keyword, news_list)
-        if name:
-            weibo = search_weibo(name)
-            ret = can_send_weibo(name, weibo)
-            if ret:
-                send_contents["weibo"] = ret
+        # if name:
+        #     weibo = search_weibo(name)
+        #     ret = can_send_weibo(name, weibo)
+        #     if ret:
+        #         send_contents["weibo"] = ret
         return send_contents
     except Exception, e:
         logger.error(traceback.format_exc(e))

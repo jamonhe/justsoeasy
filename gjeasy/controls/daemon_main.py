@@ -19,7 +19,7 @@ def daemon_main(interval=300):
     words_emails = Keywords.get_search_words(interval)
     print "word_emails=", words_emails
     for word, emails in words_emails:
-        AccountSetting.update_search_time(emails, word, time.time())
+        # AccountSetting.update_search_time(emails, word, time.time())
         latest_content = get_msg(word, word)
         print "content", latest_content
         send_msg(emails, word, word, latest_content)

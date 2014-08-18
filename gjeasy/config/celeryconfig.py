@@ -4,12 +4,13 @@ from celery import Celery
 from celery.schedules import crontab
 from datetime import timedelta
 from kombu import Queue, Exchange
+from gjeasy.config import DOMAIN_IP
 
 
 class BaseConfig(object):
     CELERY_ACKS_LATE = True
     CELERY_TIMEZONE = 'Asia/Shanghai'
-    BROKER_URL = "amqp://gjeasy:gjeasy168@115.29.142.18:5672//"
+    BROKER_URL = "amqp://gjeasy:uftu279@%s:5201//" % DOMAIN_IP
     CELERY_QUEUES = (
         Queue('grab_msg', Exchange('grab_msg'), routing_key='grab_msg'),
     )
