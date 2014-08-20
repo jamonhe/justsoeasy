@@ -1,6 +1,6 @@
 #coding=utf8
 
-from celery import Celery
+from celery import Celery, platforms
 from celery.schedules import crontab
 from datetime import timedelta
 from kombu import Queue, Exchange
@@ -35,6 +35,6 @@ class BaseConfig(object):
     }
 
 
-
 celery = Celery()
 celery.config_from_object(BaseConfig)
+platforms.C_FORCE_ROOT = True
