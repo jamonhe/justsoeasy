@@ -56,7 +56,7 @@ def send_msg(email_list, keyword, name, content):
     for email in email_list:
         if content.has_key("news") and content["news"]:
             send_news = need_send_news(email, keyword, content["news"])
-            logger.debug("need to send %d news" % send_news)
+            logger.debug("need to send %d news" % len(send_news))
             if send_news:
                 news_str = gen_news_str(send_news)
                 subject = "%s 有新消息了^-^" % '+'.join(keyword)

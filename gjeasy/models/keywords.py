@@ -55,4 +55,4 @@ class Keywords(object):
         return result
 
 if __name__ == "__main__":
-    Keywords.add_words("352622654@qq.com", [u"姚贝娜"])
+    Keywords.add_words("352622654@qq.com", [u"成龙"])
