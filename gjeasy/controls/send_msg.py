@@ -1,7 +1,7 @@
 #coding=utf8
 from datetime import datetime
 import time
-from gjeasy import logger
+from gjeasy.logger import logger
 from gjeasy.emails.send_mail import send_mail
 from gjeasy.models.account_setting import AccountSetting
 from gjeasy.utils.tranverse_time import trans_time
