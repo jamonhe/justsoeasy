@@ -4,6 +4,7 @@ import time
 import tornado.httpserver
 import tornado.ioloop
 import tornado.web
+from gjeasy.config.configure import MAIN_PORT
 from gjeasy.logger import logger
 from gjeasy.controls.get_msg import get_msg
 from gjeasy.controls.send_msg import gen_news_str, gen_weibo_str
@@ -14,11 +15,14 @@ class MainHandler(tornado.web.RequestHandler):
         start_time = time.time()
         result = get_msg(keyword=word)
         end_time = time.time()
+
         result = gen_news_str(result["news"])# + gen_weibo_str(result["weibo"])
 
         logger.debug("found result: %s" % result)
         logger.debug("this search took %s seconds" % (end_time-start_time))
-        self.write(result.replace("\n", "<br>").replace(" ", "&nbsp;"))
+        self.write('''<html><body>'''+result.replace("\n", "<br>")+'''</body></html>''')
+
+        # self.write('''<html><body''' + result.replace("\n", "<br>").replace(" ", "&nbsp;") + '''</body></html>''')
 
 application = tornado.web.Application([
     (r"/", MainHandler),
@@ -26,5 +30,5 @@ application = tornado.web.Application([
 
 if __name__ == "__main__":
     http_server = tornado.httpserver.HTTPServer(application)
-    http_server.listen(8880)
+    http_server.listen(MAIN_PORT)
     tornado.ioloop.IOLoop.instance().start()

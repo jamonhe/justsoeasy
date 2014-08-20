@@ -55,8 +55,9 @@ def get_msg(keyword=None, name=None):
             return {}
         send_contents = {}
         news_list = search_news(keyword)
-        print news_list
+
         send_contents["news"] = can_send_news(keyword, news_list)
+        logger.debug("can send %d news after filtered" % len(send_contents["news"]))
         # if name:
         #     weibo = search_weibo(name)
         #     ret = can_send_weibo(name, weibo)

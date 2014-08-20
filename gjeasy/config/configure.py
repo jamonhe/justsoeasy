@@ -7,7 +7,7 @@ if current_env == "development":
     LOG_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "log")
     MAIN_PORT = 8880
 else:
-    LOG_PATH = "/home/gjeasy/log"
+    LOG_PATH = "/home/gjeasy/log/gjeasy"
     MAIN_PORT = 80
 
 LOG_FILE = "%s/gjeasy.log" % LOG_PATH
