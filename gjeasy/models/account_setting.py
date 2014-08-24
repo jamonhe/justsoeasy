@@ -87,6 +87,6 @@ class AccountSetting(Base):
 
 if __name__ == "__main__":
     email = "352622654@qq.com"
-    keyword = ["姚贝娜"]
+    keyword = ["成龙"]
     AccountSetting.add_words(email, keyword)
     print AccountSetting.get_last_time(email, keyword[0])

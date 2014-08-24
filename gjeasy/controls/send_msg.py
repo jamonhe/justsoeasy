@@ -10,14 +10,15 @@ from gjeasy.utils.tranverse_time import trans_time
 def need_send_news(email, keyword, news_list):
     """
     根据消息发布时间查询数据库，判断该消息是否需要发送，
-    若发布时间>=数据库中该用户keyword的最后一次搜索时间，且最后一次发送时间>=最后一次搜索时间，则发送；
+    若发布时间>=数据库中该用户keyword的最后一次发送邮件时间，则发送
+    #若发布时间>=数据库中该用户keyword的最后一次搜索时间，且最后一次发送时间>=最后一次搜索时间，则发送；
     : keyword:  key word in once search news
     : news_list: news results(a list) of searching , must contain title,content,time,url
     """
     need_send_news = []
     last_search_time, last_email_time = AccountSetting.get_last_time(email, keyword)
     for news in news_list:
-        if last_search_time <= trans_time(news["time"]) and last_search_time >= last_email_time:
+        if last_email_time <= trans_time(news["time"]): #and last_search_time >= last_email_time:
             need_send_news.append(news)
 
         #send_news.append("%s    %s %s \n   %s\n   %s" %
